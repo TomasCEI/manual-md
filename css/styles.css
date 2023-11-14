@@ -1,1 +1,54 @@
 /* Hoja de estilos de alumnos */
+.Body{
+    margin: 0;
+}
+
+header{
+    display: block;
+    padding: 20px;
+    text-align: center;
+}
+
+#container{
+    display: flex;
+    margin: 0;
+    max-width: 100%;
+    margin: 20px;
+    height: 100vh;
+
+}
+
+.Container-menu{
+    width: 300px;
+    overflow: auto;
+}
+
+#content{
+    overflow: auto;
+    flex-grow: 1;
+    margin-left: 20px;
+    border: 1px solid black;
+    padding: 20px
+   
+}
+
+#content img{
+    width: 70%;
+}
+
+#menuCapitulos li{
+    margin-bottom: 10px;
+}
+
+#menuCapitulos li a{
+    color: black;
+    font-size: 130% ;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    height: 200px;
+}
+
+

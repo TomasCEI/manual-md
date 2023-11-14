@@ -13,7 +13,7 @@ const A_capitulos = ["capitulo1.md", "capitulo2.md", "capitulo32.md", "capitulo4
 // Lista de capitulos con carpetas
 const A_capitulos2 = [
     "css/introduccion.md", "css/contenido.html", "css/contenido.md",
-    "html/introduccion.md", "html/resultados.html", "html/final.md",
+    "html-basico/intro.md", "html-basico/capitulo2.md", "html-basico/capitulo3.md","html-basico/capitulo4.html",
     "java-script/introduccion.md", "java-script/final.md"
 ];
 
@@ -207,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const seccionSlug = capituloSeleccionado;
 
             A_HtmlGenerado.forEach(htmlGenerado => {
-                const customHTML = `<div class="card" id="${seccionSlug}"><h1>${seccionTitle}</h1>${htmlGenerado}</div>`;
+                const customHTML = `<div style="margin-bottom:50px" class="card" id="${seccionSlug}"><div id="keywords">Keyword1 ,Keyword2, Keyword3</div><h1>${seccionTitle}</h1>${htmlGenerado}</div>`;
                 contentDiv.innerHTML += customHTML;
             });
             addContentBeforePre();
