@@ -1,1 +1,102 @@
 /* Hoja de estilos de alumnos */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Rubik';
+    font-size: 13px;
+}
+
+:root {
+    --default-font-color: #363960;
+    --default-color-01: #9cb4f4 ;
+    --default-color-02: #6472a4;
+    --default-background: #dadada;
+
+    --light-font-color: #6472a4;
+    --light-color-01: #9cb4f4 ;
+    --light-color-02: #dadada;
+    --light-background: #ffffff;
+
+
+    --dark-font-color: #dadada;
+    --dark-color-01: #363960 ;
+    --dark-color-02: #9cb4f4;
+    --dark-background: #6472a4;
+}
+
+.header{
+    width: 100%;
+    background-color: var(--default-color-01);
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.headerLogo{
+    font-weight: 900;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--default-color-02);
+}
+
+.headerSearch{
+    position: absolute;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerSearch input{
+    width: 0px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid var(--default-font-color);
+    border-radius: 30px;
+    transition: all 0.6s ease;
+    font-family: 'Rubik';
+    background-color:var(--default-background);
+}
+
+.headerSearch i{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    background-color: var(--default-font-color);
+    text-align: center;
+    color: var(--default-background);
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.headerSearch:hover input{
+   width: 240px; 
+}
+
+.headerSearch input:focus{
+    width: 240px;
+}
+
+.headerButton{
+    background-color: transparent;
+    border: 0cap;
+    font-family: 'Rubik';
+    font-size: 20px;
+    margin: 2em;
+    color: var(--default-font-color);
+}
+
