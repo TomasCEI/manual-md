@@ -8,8 +8,6 @@
     <link rel="icon" href="imgs/github.svg">
 
     <!-- para highlight de sytanx-->
-    <li2nk rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism.css" inte2grity="sha384-yNgw44Rloml3J/Rq/xBbuR+JDX9GRVu7LM+iI0aOSPGGcg3Xm2gOMYSttZSOQr4U" crossorigin="anonymous">
-    <li3nk rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-coy.min.css" integrity="sha512-LOT5F67SMZVdXMrvQe4S1ZHu5l6xk3CST2qqno9kY329OsJBBpybnq+fM9qG4ZSaNzPOjoGzHAeBamSSJyyuZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     
@@ -17,6 +15,9 @@
     <link rel="stylesheet" href="css/github.css">
     <!-- Hoja de Estilos del manual -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@300&display=swap" rel="stylesheet">
     
 </head>
 <body>
@@ -36,8 +37,8 @@
             <h1>Manual con Obtención de código</h1>
         </header>
 
-        <div sty2le="display:flex;">
-            <nav>
+        <div class="contenedor" style="display:flex;">
+            <nav class="barra">
                 <!-- Nav de ejemplo: 
                     <ul>
                         <li><a href="#">Item 1</a></li>
@@ -55,7 +56,7 @@
                     </ul> 
                 -->
 
-                    <ul id="menuCapitulos"></ul>
+                    <ul class="menu" id="menuCapitulos"></ul>
             </nav>
             <div id="content"></div>
         </div>

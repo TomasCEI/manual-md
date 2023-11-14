@@ -1,1 +1,65 @@
 /* Hoja de estilos de alumnos */
+
+*{
+    font-family: 'Poppins';
+}
+header{
+    justify-content: center;
+}
+.card{
+    width: 70%;
+    margin-left: 5%;
+}
+.card h1{
+    /*color:rgb(255, 0, 208);*/
+    font-style: italic;
+}
+
+.card a{
+    text-decoration: none;
+    color:black;
+}
+
+.card a:hover{
+    font-style: italic;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 0.5%;
+}
+
+.card li{
+    list-style-type: none;
+}
+
+.menu a{
+    text-decoration: none;
+    color:black;
+}
+
+.menu a:hover{
+    text-decoration: none;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.menu ul{
+    list-style-type: none;
+}
+
+.barra{
+    background-color:rgb(239, 220, 245);
+    border-radius: 10px;
+}
+
+.contenedor{
+    background-color: rgb(239, 232, 241);
+    width: 100%;
+    border-radius: 20px;
+}
+
+#container{
+    /*background-color: violet;*/
+    max-width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
