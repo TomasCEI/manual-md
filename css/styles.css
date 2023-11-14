@@ -1,1 +1,144 @@
 /* Hoja de estilos de alumnos */
+
+:root {
+
+    /* Light mode */
+    --lavender-floral: #a379c9ff;
+    --steel-pink: #b744b8ff;
+    --emerald: #2cda9dff;
+    --teal: #0e7c7bff;
+
+    --background: #E4D6F0;
+    --content-background: #ede8f2;
+    --my-black: #410941;
+
+    /* Dark Mode */
+    --dark-background: #410941;
+}
+
+body {
+    background-color: var(--background);
+    overflow-x: hidden;
+
+}
+
+.dark-mode {
+    background-color: var(--dark-background);
+    color: white;
+  }
+
+.dark-mode header {
+    background-color: var(--steel-pink);
+}
+
+#container {
+    max-width: 100%;
+}
+
+header {
+    width: 900px;
+    margin: 100px auto 100px auto;
+    padding: 20px;
+    border-radius: 50px;
+    justify-content: center;
+
+    font-family: 'Bungee';
+
+    background-color: var(--lavender-floral);
+    color: white;
+    border: 10px solid var(--steel-pink);
+}
+
+nav {
+    background-color: var(--steel-pink);
+    margin-left: 40px;
+    margin-right: 0px;
+    border-radius: 40px;
+    border-top-right-radius: 0px;
+    border: none;
+}
+
+#menuCapitulos {
+    width: 280px;
+    padding: 20px;
+
+}
+
+#menuCapitulos ul a {
+    color: white;
+    text-shadow: none;
+    font-size: 16px;
+}
+
+#menuCapitulos li {
+    margin-bottom: 10px;
+    color: white;
+}
+
+#menuCapitulos a {
+    color: var(--emerald);
+    font-family: 'Bungee';
+    font-size: 20px;
+
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+
+}
+
+#content {
+    max-width: 73%;
+    background-color: var(--content-background);
+    padding: 50px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+#content h1 {
+    font-family: 'Bungee';
+    color: var(--emerald);
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+
+}
+
+#content a {
+    background-color: var(--steel-pink);
+    padding: 10px 50px;
+    border-radius: 25px;
+    color: white;
+    border: 4px solid var(--emerald);
+    cursor: pointer;
+}
+
+#content p {
+    font-family: 'Rubik';
+    margin-bottom: 30px;
+}
+
+#content h2 {
+    font-family: 'Rubik';
+    font-weight: bold;
+    color: var(--teal);
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}
+
+#content td a {
+    background-color: inherit;
+    border: none;
+    color: inherit;
+}
+
+#content ul {
+    margin-bottom: 40px;
+}
+
+#content ul li {
+    font-family: 'Rubik';
+    font-weight: 300;
+}
+
+#content .code-title {
+    font-family: 'Rubik';
+    font-weight: 700;
+    color: var(--my-black);
+}
+
+#content .language-html
