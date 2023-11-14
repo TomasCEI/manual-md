@@ -1,1 +1,61 @@
 /* Hoja de estilos de alumnos */
+
+body{
+    background-color: white;
+}
+
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.menu {
+    display: flex;
+    
+}
+
+.banner {
+    display: flex;
+    background-image: url("https://img.freepik.com/foto-gratis/experiencia-programacion-persona-que-trabaja-codigos-computadora_23-2150010144.jpg?w=1360&t=st=1699979341~exp=1699979941~hmac=51c77e12d7554448fb9dc6c09fac85ccaf606b343dd2327f1b473647f47fbbc0");
+    height: 500px;
+    color: white;
+    justify-content: center;
+  
+    align-items: center;
+    margin-bottom: 2rem;
+    
+}
+
+.main{
+    
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+
+
+
+}
+.BoxImput{
+    margin-left:3rem;
+}
+
+.search {
+    margin-right: 3rem;
+}
+
+.InfoArticulos{
+   display: flex;
+   flex-direction: column;
+   height: 50%;
+}
+
+
+.info{
+    background-color: rgb(149, 117, 205, 0.3);
+    margin-right: 5rem;
+    border-radius: 3%;
+    padding: 2rem;
+    
+}
