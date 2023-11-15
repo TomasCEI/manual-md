@@ -3,25 +3,19 @@
 :root {
 
     /* Light mode */
-    --lavender-floral: #a379c9ff;
-    --steel-pink: #b744b8ff;
-    --emerald: #2cda9dff;
-    --teal: #0e7c7bff;
+    --first-color: #a379c9ff;
+    --second-color: #b744b8ff;
+    --third-color: #2cda9dff;
+    --forth-color: #0e7c7bff;
+
+    --white: #fff;
+    --black: #000000;
 
     --background: #E4D6F0;
     --content-background: #ede8f2;
     --my-black: #410941;
 
     /* Dark Mode */
-    --first-color:#62427e;
-    --second-color: #6f0f70;
-    --third-color: #1d6d51;
-    --forth-color: #0b2525;
-
-
-
-    --dark-background: #140214;
-    --content-dark-bg: #3d1a3d;
 }
 
 body {
@@ -34,8 +28,17 @@ body {
 
 
 .dark-mode {
-    background-color: var(--dark-background);
-    color: white;
+    --first-color:#563277;
+    --second-color: #6f0f70;
+    --third-color: #1d6d51;
+    --forth-color: #0b2525;
+
+    --white: #1a121a;
+    --black: #fff;
+    --my-black: rgb(217, 154, 244);
+
+    --background: #140214;
+    --content-background: rgb(120, 75, 142);
   }
 
 
@@ -47,27 +50,25 @@ body {
     'opsz' 24
   }
 
-.dark-mode header {
-    background-color: var(--first-color);
-    border-color: var(--second-color);
-    color: black;
-}
-
-.dark-mode nav {
-    background-color: var(--second-color);
-}
-
-.dark-mode #content {
-    background-color: var(--content-dark-bg);
-}
 
 .dark-mode #content h1 {
-    color: var(--third-color);
     text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000, 1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
 }
 
-.dark-mode #content p {
-    color: black;
+.dark-mode #menuCapitulos a {
+    text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000, 1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+}
+
+.dark-mode #content pre code {
+    text-shadow: none;
+}
+
+.dark-mode #content pre code span {
+    text-shadow: none;
+}
+
+.dark-mode #content pre code span .token.tag {
+    color: #bb4fbd;
 }
 
 /* ------------------- */
@@ -81,7 +82,7 @@ body {
 
 /* ---------- */
 
-.modes_container {
+.mode_container {
     width: fit-content;
     margin: 0px auto 100px auto; 
     display: flex;
@@ -123,13 +124,13 @@ header {
 
     font-family: 'Bungee';
 
-    background-color: var(--lavender-floral);
+    background-color: var(--first-color);
     color: white;
-    border: 10px solid var(--steel-pink);
+    border: 10px solid var(--second-color);
 }
 
 nav {
-    background-color: var(--steel-pink);
+    background-color: var(--second-color);
     margin-left: 40px;
     margin-right: 0px;
     border-radius: 40px;
@@ -156,7 +157,7 @@ nav {
 }
 
 #menuCapitulos a {
-    color: var(--emerald);
+    color: var(--third-color);
     font-family: 'Bungee';
     font-size: 20px;
 
@@ -175,23 +176,24 @@ nav {
 
 #content h1 {
     font-family: 'Bungee';
-    color: var(--emerald);
+    color: var(--third-color);
     text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
 
 }
 
 #content a {
-    background-color: var(--steel-pink);
+    background-color: var(--second-color);
     padding: 10px 50px;
     border-radius: 25px;
     color: white;
-    border: 4px solid var(--emerald);
+    border: 4px solid var(--third-color);
     cursor: pointer;
 }
 
 #content p {
     font-family: 'Rubik';
     margin-bottom: 30px;
+    color: var(--black);
 }
 
 #content h2 {
@@ -209,6 +211,7 @@ nav {
 
 #content ul {
     margin-bottom: 40px;
+    color: var(--black);
 }
 
 #content ul li {
@@ -222,6 +225,11 @@ nav {
     color: var(--my-black);
 }
 
-#content .language-html {
-
+#content pre {
+    background-color: var(--white);
 }
+
+#content pre code {
+    color: var(--black);
+}
+
