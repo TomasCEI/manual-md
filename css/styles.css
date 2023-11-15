@@ -13,6 +13,7 @@
 :root {
     --light-blue: #dfe9f5;
     --light-white: white;
+    --light-gray: rgba(197, 187, 187, 0.400);
     --dark-blue: #001f2b;
 }
 
@@ -20,6 +21,10 @@ body {
     background-color: var(--light-blue);
     color: var(--dark-blue);
     font-family: 'Poppins';
+}
+
+nav>ul {
+    position: static;
 }
 
 h1,
@@ -39,9 +44,10 @@ h4 {
     min-height: 80vh;
 }
 
-.is-centered {
+header {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    padding: 1%;
 }
 
 footer {
@@ -58,17 +64,33 @@ footer {
     gap: 2%;
 }
 
-.btn {
+.btn,
+.bloque-copy {
     padding: 15px;
     background-color: var(--dark-blue);
     color: var(--light-blue);
     border-radius: 15px;
-    border: none;  
+    border: none;
     margin: 10px;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
 }
 
-.btn:hover{
-    background-color: var(--light-blue);
+.btn:hover,
+.bloque-copy:hover {
+    background-color: var(--light-gray);
+    color: var(--dark-blue);
 }
+
+@media only screen and (max-width: 600px) {
+    header { 
+      display: flex;
+      flex-wrap: wrap; 
+      flex-grow: 1; 
+      gap: 15px;
+      margin-top: 50px;
+    }
+    #container {
+       grid-template-columns: 100%;
+    }
+  }
