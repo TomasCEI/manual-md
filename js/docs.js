@@ -209,9 +209,15 @@ function imprimirTarjetas() {
                                             </ul>
                                         </div>
                                         ${htmlGenerado}
-                                        <form><label><input id="check_leido_${articuloSlug}" class="tf_leido" type="checkbox"> Marcar como leído</label></form>
-                                        <a href="#${articuloPrevSlug}" class="Card-btn Card-btn--primary"></a>
-                                        <a href="#${articuloNextSlug}" class="Card-btn Card-btn--secondary"></a>
+                                        <form>
+                                            <label class="Form-checkbox">
+                                                <input id="check_leido_${articuloSlug}" class="tf_leido" type="checkbox"> Marcar como leído
+                                            </label>
+                                        </form>
+                                        <div class="Card-buttons">
+                                            <a href="#${articuloPrevSlug}" class="Card-btn Card-btn--primary"></a>
+                                            <a href="#${articuloNextSlug}" class="Card-btn Card-btn--secondary"></a>
+                                        </div>
                                     </div>`;
                 contentDiv.innerHTML += customHTML;
             });
