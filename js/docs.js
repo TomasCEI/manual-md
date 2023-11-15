@@ -207,7 +207,16 @@ document.addEventListener("DOMContentLoaded", function () {
             const seccionSlug = capituloSeleccionado;
 
             A_HtmlGenerado.forEach(htmlGenerado => {
-                const customHTML = `<div style="margin-bottom:50px" class="card" id="${seccionSlug}"><div id="keywords">Keyword1 ,Keyword2, Keyword3</div><h1>${seccionTitle}</h1>${htmlGenerado}</div>`;
+                const customHTML = `
+                <div style="margin-bottom:30px; border: 1px solid gray; padding:20px;"  class="card darkModeCard" id="${seccionSlug}">
+                <div style="display:flex; width:100%; justify-content:space-between; align-items:center">
+                    <h1>${seccionTitle}</h1>
+                    <h3 style="padding:10px; border:1px solid gray;">Porcentaje leído: X %</h3>
+                </div>
+                <div id="keywords">Keyword1 ,Keyword2, Keyword3</div>
+                ${htmlGenerado}
+                </div>
+                <hr  style="margin-bottom:30px" >`;
                 contentDiv.innerHTML += customHTML;
             });
             addContentBeforePre();

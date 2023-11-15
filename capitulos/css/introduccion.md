@@ -1,6 +1,6 @@
 # introducción CSS
 
-hola soy el capiotulo 2
+hola soy el capiotulo 
 
 [Ecampus2](https://ecampus.com.ar)
 

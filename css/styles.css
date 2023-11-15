@@ -1,6 +1,8 @@
 /* Hoja de estilos de alumnos */
 *{
     font-family: 'Work Sans', sans-serif;
+        
+    font-weight: 400;
 
 }
 
@@ -34,7 +36,7 @@ header{
 #content{
     overflow: auto;
     flex-grow: 1;
-    padding: 20px
+
    
 }
 
@@ -44,6 +46,7 @@ header{
 
 #menuCapitulos{
     flex-grow: 1;
+    overflow: auto;
 }
 
 #menuCapitulos li{
@@ -68,16 +71,26 @@ footer{
     color: white;
 }
 
+.darkModeCard{
+    background-color: rgb(82, 82, 82);
+    color: white;
+}
+
 .lightMode{
     background-color: white;
     color: black;
 }
 
+
 .newMode{
-    background-color: rgb(147, 236, 168);
+    background-color:rgb(93, 156, 107);
     color: black
 }
 
+.newModeCard{
+    background-color: rgb(147, 236, 168);
+    color: black
+}
 .iconDark{
     color: black;
 }
@@ -103,6 +116,7 @@ footer{
     padding: 10px;
     border-radius: 5px;
     margin-right: 5px;
+    cursor: pointer;
 }
 
 .fixed-rigth{
@@ -130,6 +144,7 @@ footer{
         width: 90vh;
         top: 0;
         height: 100vh;
+        
 
 
     }
