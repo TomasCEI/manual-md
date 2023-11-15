@@ -1,0 +1,1 @@
+## Guía para entender el código Javascript de este proyecto
