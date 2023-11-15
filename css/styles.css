@@ -1,1 +1,91 @@
 /* Hoja de estilos de alumnos */
+* {
+    margin: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    background-color:var(--background-01);
+   
+}
+
+:root {
+    --background-01: white;
+    --background-02: rgb(230, 242, 245); 
+    --background-03: rgba(255,131,176,.5);
+    --background-04: rgb(250, 250, 250);
+    --gradient: linear-gradient(315deg, #e96195ad 0%, #ffffff 74%);
+    --primary-color: #f63e7c;
+    --secundary-color: grey;
+    -
+
+    /* Tipografía*/
+
+    --heading01:32px;
+    --heading02: 24px;
+    --body01: 18px;
+    --body02: 16px;
+    --helper: 12px;
+
+
+}
+
+.menu ul li a{
+    color: red;
+}
+
+.menu ul li ul a {
+    color: green;
+
+}
+
+
+.menu li ul li a{
+    color: blue;
+}
+.h1{
+
+
+
+    font-size: var(--heading01);
+
+}
+
+.body {
+    margin: 0;
+    
+}
+
+
+.menu {
+    display: flex;
+    height: auto;
+    min-height: 900px;
+  
+}
+
+.menu a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: var(--body01);
+    color: var(--secundary-color);
+    height: 20px;
+    
+
+
+}
+
+.li {
+border-bottom: #f63e7c;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: row;
+    
+   
+}
+
+
+
+#container {
+    margin: 0px;
+    max-width: 100vw;
+}
