@@ -199,6 +199,7 @@ function imprimirTarjetas() {
                 const articuloNextSlug = articuloSlug; // proximamente
                 const readTime = Math.round(htmlGenerado.length / 1000);
                 const customHTML = `<div class="Card" id="${articuloSlug}">
+                                        <h1 class="Card-title">${articuloTitle}</h1>
                                         <div class="Card-reading-time">Lectura: ${readTime}min</div>
                                         <div class="Card-keywords">
                                             <ul>
@@ -207,7 +208,6 @@ function imprimirTarjetas() {
                                                 <li><a class="Keyword" herf="#"># Key 3</a></li>
                                             </ul>
                                         </div>
-                                        <h1>${articuloTitle}</h1>
                                         ${htmlGenerado}
                                         <form><label><input id="check_leido_${articuloSlug}" class="tf_leido" type="checkbox"> Marcar como leído</label></form>
                                         <a href="#${articuloPrevSlug}" class="Card-btn Card-btn--primary"></a>
