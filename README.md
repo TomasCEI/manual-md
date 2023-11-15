@@ -63,15 +63,15 @@ Alumnos de Diseño Web del CEI - 2023
 
 
 ## ToDos: Funcionalidades del Manual (JS):
-[X] Menu de capítulos
-[x] Archivo `index.json` con opciones y lista de capitulos
-[x] Armado de Menu automático con información de `index.json`
-[x] Obtener artículos por capítulo desde el `index.json`
-[x] Procesar archivos `*.MD`
-[x] Estilos para bloques de código `markdown.css`
-[ ] Título del manual desde `index.json`
-[ ] Link a Github desde `index.json`
-[ ] Botones Siguiente - Anterior capítulo
-[ ] Href a cada artículo desde el menu
-[ ] Expandir y contraer lista de temas por capítulos en el Sidebar
-[ ] Buscador de artículos `Ctrl + K`
+- [X] Menu de capítulos
+- [x] Archivo `index.json` con opciones y lista de capitulos
+- [x] Armado de Menu automático con información de `index.json`
+- [x] Obtener artículos por capítulo desde el `index.json`
+- [x] Procesar archivos `*.MD`
+- [x] Estilos para bloques de código `markdown.css`
+- [x] Título del manual desde `index.json`
+- [ ] Link a Github desde `index.json`
+- [ ] Botones Siguiente - Anterior capítulo
+- [x] Href a cada artículo desde el menu
+- [ ] Expandir y contraer lista de temas por capítulos en el Sidebar
+- [ ] Buscador de artículos `Ctrl + K`
