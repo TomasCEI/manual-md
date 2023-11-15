@@ -3,7 +3,9 @@
 *{
     font-family: 'Poppins';
 }
-
+html{
+    scroll-behavior: smooth;
+}
 :root{
     --color-primary:#F4EFFA;
     --color-secondary:#C8B1E4;
@@ -18,8 +20,13 @@ header{
     justify-content: center;
 }
 
+.language-markdown{
+    background-color: red;
+}
+
 .dark-mode {
-    --color-primary:red;
+    --color-primary:#3a393b;
+    --color-secondary:#685d75;
     background-color:black;
     --color-text:white;
   }
@@ -40,7 +47,7 @@ header{
 
 .btnDark{
     width: 50px;
-    height: 20px;
+    height: 50px;
     border-radius: 10px;
     border: 0;
     background-color: var(--color-third);
@@ -49,7 +56,7 @@ header{
 
 .btnLight{
     width: 50px;
-    height: 20px;
+    height: 50px;
     border-radius: 10px;
     border: 0;
     background-color: var(--color-third);
@@ -57,17 +64,24 @@ header{
 }
 
 .btnDark:hover,.btnLight:hover{
-    background-color:red;
+    background-color:var(--color-text);
+    color:var(--color-white)
 }
 
-.btnDark:focus,.btnLight:focus{
-    background-color:black;
-    color:white;
+.btnDark:focus{
+    background-color:var(--color-text);
+    color:var(--color-white);
 }
+
+.btnLight:focus{
+    background-color:var(--color-white);
+    color:var(--color-text);
+}
+
 
 .card{
     width: 70%;
-    margin-left: 5%;
+    margin-left: 10%;
 }
 .card h1{
     /*color:rgb(255, 0, 208);*/
@@ -133,5 +147,106 @@ header{
 
 .tf_leido{
     cursor: pointer;
-    background-color: #fff;
+}
+
+.Card-reading-time{
+    font-style: italic;
+    color:var(--color-text)
+}
+
+.Card-keywords ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+}
+
+.Card-keywords{
+    color:var(--color-secondary);
+}
+
+.Keyword{
+    color:var(--color-text);
+}
+.Keyword:hover{
+    text-decoration: none;
+    font-style: italic;
+}
+
+@media screen and (min-width: 900px){
+    .contenedor{
+        width: 100%;
+    }
+
+    .contenedor img{
+        width: 90%;
+    }
+
+    .barra{
+        width: 15%;
+    }
+    .barra a, ul{
+        font-size: 13px;
+    }
+    .Card{
+        width: 90%;
+        margin-left:2%;
+        margin-top: 1%;
+    }
+}
+
+
+@media screen and (max-width: 900px){
+    .contenedor{
+        width: 100%;
+    }
+
+    .contenedor img{
+        width: 90%;
+    }
+
+    .barra{
+        width: 30%;
+    }
+    .Card{
+        width: 70%;
+        margin-left:2%;
+        margin-top: 1%;
+    }
+}
+
+@media screen and (max-width: 760px){
+
+    h1{
+        font-size: 20px;
+    }
+    .contenedor{
+        width: 80%;
+        flex-direction: column;
+        display: flex;
+    }
+    .barra{
+        width: 100%;
+    }
+
+    .barra a, ul{
+        font-size: 12px;
+    }
+    .Card{
+        width: 60%;
+        margin-left:2%;
+        margin-top: 1%;
+        font-size: 15px;
+    }
+
+    .Btns{
+        margin-bottom: 0px;
+        justify-content:left;
+    }
+
+    .btnDark, .btnLight{
+        margin-bottom: 10px;
+        width: 50px;
+        height: 30px;
+    }
 }
