@@ -112,7 +112,7 @@
 
 <script>
     var body = document.getElementById("body");
-    var cont = 0;
+    var cont = 1;
     var menu = document.getElementById("menu");
     var arrow1 = document.getElementById("arrow1");
     var arrow2 = document.getElementById("arrow2");
@@ -122,8 +122,16 @@
 
     window.addEventListener("resize", function () {
         console.log("AUHBAIHJ")
-        if (window.innerWidth < 500)
+        if (window.innerWidth < 500){
             menu.classList.add("isnot-active");
+
+            var section = document.getElementById("SectionTop");
+            section.classList.add("u-flexColumn");
+        }else{
+            var section = document.getElementById("SectionTop");
+            section.classList.remove("u-flexColumn");
+        }
+           
     });
 
     function mostrarMenu() {
@@ -138,6 +146,7 @@
 
     }
     function cambioModo() {
+    
         const cards = document.querySelectorAll('.card');
 
         if (cont == 0) {

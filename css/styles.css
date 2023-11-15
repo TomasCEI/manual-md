@@ -131,6 +131,10 @@ footer{
     left: 20px;
 }
 
+.u-flexColumn{
+    flex-direction: column;
+}
+
 .isnot-active{
     display: none;
 }

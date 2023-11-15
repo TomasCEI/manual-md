@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
             A_HtmlGenerado.forEach(htmlGenerado => {
                 const customHTML = `
                 <div style="margin-bottom:30px; border: 1px solid gray; padding:20px;"  class="card darkModeCard" id="${seccionSlug}">
-                <div style="display:flex; width:100%; justify-content:space-between; align-items:center">
+                <div id="SectionTop" style="display:flex; width:100%; justify-content:space-between; align-items:center">
                     <h1>${seccionTitle}</h1>
                     <h3 style="padding:10px; border:1px solid gray;">Porcentaje leído: X %</h3>
                 </div>
