@@ -11,6 +11,7 @@
     --color-fourth:#532B88;
     --color-fifth: #2F184B;
     --color-text: black;
+    --color-white:white;
 }
 
 header{
@@ -30,25 +31,29 @@ header{
 }
 
 .Btns{
-    background-color: aqua;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 .btnDark{
     width: 50px;
-    height: 50px;
+    height: 20px;
     border-radius: 10px;
     border: 0;
     background-color: var(--color-third);
+    margin-right: 10px;
 }
 
 .btnLight{
     width: 50px;
-    height: 50px;
+    height: 20px;
     border-radius: 10px;
     border: 0;
     background-color: var(--color-third);
+    margin-right: 10px;
 }
 
 .btnDark:hover,.btnLight:hover{
@@ -89,9 +94,12 @@ header{
     list-style-type: none;
 }
 
-.menu a{
-    text-decoration: none;
+.menu li a {
     color:var(--color-text);
+}
+
+.menu li ul li a {
+    color:var(--color-fourth);
 }
 
 .menu a:hover{
