@@ -64,10 +64,10 @@
 
             <header class="Container-header">
                 <h1 style="font-weight: 900; ">MANUAL CON OBTENCIÓN DE CÓDIGO</h1>
-                <form action="index.html" method="get">
-                    <input type="text">
-                    <button type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i></button>
-                </form>
+                <button class="Container-header-search" onclick="mostrarBuscador()">
+                    <span style="margin-right: 10px;">Buscador Command+K</span>
+                    <i class="fa-solid fa-magnifying-glass" ></i>
+                </button>
             </header>
         </div>
 
@@ -81,16 +81,25 @@
             <div class="Arrows-arrow" onclick="mostrarMenu()">
                 <i class="fa-solid fa-bars" style="color: #000000;"></i>
             </div>
-            <div id="arrow2" class="Arrows-arrow">
+          <!-- <div id="arrow2" class="Arrows-arrow">
                 <i class="fa-solid fa-arrow-left" style="color: #000000;"></i>
             </div>
             <div id="arrow1" class="Arrows-arrow">
                 <i class="fa-solid fa-arrow-right" style="color: #000000;"></i>
-            </div>
+            </div>--> 
 
         </div>
     </div>
 
+
+    <div id="Search" class="Search u-centrar isnot-active">
+        <form class="Search-form" action="index.html" method="get">
+         
+            <input class="Search-form-search" type="text" name="tit" id="tit" placeholder="Introduce Keywords para buscar"/>
+            <button class="Search-form-lupa" type="submit"><i class="fa-solid fa-magnifying-glass" ></i></button>
+
+        </form>
+    </div>
 
 
 
@@ -123,20 +132,27 @@
     var arrow1 = document.getElementById("arrow1");
     var arrow2 = document.getElementById("arrow2");
 
-
-
+    var buscador = document.getElementById("Search");
 
     window.addEventListener("resize", function () {
-        console.log("AUHBAIHJ")
+  
         if (window.innerWidth < 500) {
             menu.classList.add("isnot-active");
+        }
 
-            var section = document.getElementById("SectionTop");
-            section.classList.add("u-flexColumn");
+        if (window.innerWidth < 710) {
+            console.log("uhbki");
+            var section = document.querySelectorAll('.SectionTop');
+            section.forEach(sec => {
+                sec.classList.add("u-flexColumn");
+            });
+           
 
         } else {
-            var section = document.getElementById("SectionTop");
-            section.classList.remove("u-flexColumn");
+            var section = document.querySelectorAll('.SectionTop');
+            section.forEach(sec => {
+                sec.classList.remove("u-flexColumn");
+            });
         }
 
     });
@@ -154,14 +170,14 @@
     }
     function cambioModo() {
 
-        const cards = document.querySelectorAll('.card');
+        const cards = document.querySelectorAll('.Card');
 
         if (cont == 0) {
 
-            cards.forEach(btn => {
-                btn.classList.add("darkModeCard");
-                btn.classList.remove("lightMode");
-                btn.classList.remove("newModeCard");
+            cards.forEach(card => {
+                card.classList.add("darkModeCard");
+                card.classList.remove("lightModeCard");
+                card.classList.remove("newModeCard");
             });
 
             body.classList.add("darkMode");
@@ -170,10 +186,10 @@
             cont++
         } else if (cont == 1) {
 
-            cards.forEach(btn => {
-                btn.classList.remove("darkModeCard");
-                btn.classList.add("lightMode");
-                btn.classList.remove("newModeCard");
+            cards.forEach(card => {
+                card.classList.remove("darkModeCard");
+                card.classList.add("lightModeCard");
+                card.classList.remove("newModeCard");
             });
 
             body.classList.remove("darkMode");
@@ -183,10 +199,10 @@
 
         } else {
 
-            cards.forEach(btn => {
-                btn.classList.remove("darkModeCard");
-                btn.classList.remove("lightMode");
-                btn.classList.add("newModeCard");
+            cards.forEach(card => {
+                card.classList.remove("darkModeCard");
+                card.classList.remove("lightModeCard");
+                card.classList.add("newModeCard");
             });
 
             body.classList.remove("darkMode");
@@ -197,6 +213,21 @@
 
 
     }
+
+    function mostrarBuscador(){
+
+        buscador.classList.toggle("isnot-active");
+        menu.classList.toggle("u-blur");
+        const cards = document.querySelectorAll('.Card')
+        cards.forEach(card => {
+            
+                card.classList.toggle("u-blur");
+        });;
+
+
+
+    }
+
 </script>
 
 </html>

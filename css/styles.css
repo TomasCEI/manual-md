@@ -1,27 +1,38 @@
 /* Hoja de estilos de alumnos */
-*{
+* {
     font-family: 'Work Sans', sans-serif;
-        
+
     font-weight: 400;
 
 }
 
-.Body{
+.Body {
     margin: 0;
 }
 
-header{
+header {
     display: block;
     padding: 20px;
     text-align: center;
 }
 
-.Container-header{
-    
+.Container-header {
+
     margin-bottom: 20px;
 }
 
-#container{
+.Container-header-search {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.Container-header-search:hover {
+
+    color: yellow;
+    background-color: black;
+}
+
+#container {
     display: flex;
     margin: 0;
     max-width: 100%;
@@ -30,132 +41,241 @@ header{
 
 }
 
-.Container-menu{
+.Container-menu {
     display: flex;
     flex-direction: column;
     width: 300px;
     overflow: auto;
     border: 1px solid black;
+
 }
 
-#content{
+#content {
     overflow: auto;
     flex-grow: 1;
 
-   
+    padding: 20px;
+
+
 }
 
-#content img{
+#content h1 {
+    text-align: center;
+
+
+}
+
+#content img {
     width: 70%;
 }
 
-#menuCapitulos{
+#menuCapitulos {
     flex-grow: 1;
     overflow: auto;
 }
 
-#menuCapitulos li{
-    margin-bottom: 10px;
+
+#menuCapitulos li a {
+
+    font-size: 130%;
 }
 
-#menuCapitulos li a{
-    color: black;
-    font-size: 130% ;
-}
-
-footer{
+footer {
     width: 100%;
     text-align: center;
     height: 200px;
-    background-color: black ;
-    color: white;
-}
-
-.darkMode{
     background-color: black;
     color: white;
 }
 
-.darkModeCard{
-    background-color: rgb(82, 82, 82);
+.darkMode {
+    background-color: black;
     color: white;
 }
 
-.lightMode{
+.darkModeCard {
+    background-color: rgb(82, 82, 82);
+    color: white;
+    box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
+
+}
+
+.lightMode {
     background-color: white;
     color: black;
 }
 
-
-.newMode{
-    background-color:rgb(93, 156, 107);
-    color: black
+.lightModeCard {
+    background-color: white;
+    color: black;
+    box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray;
 }
 
-.newModeCard{
+
+
+.newMode {
+    background-color: rgb(93, 156, 107);
+    color: black;
+
+}
+
+.newModeCard {
     background-color: rgb(147, 236, 168);
-    color: black
+    color: black;
+    box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
 }
-.iconDark{
+
+.iconDark {
     color: black;
 }
 
-.iconLight{
+.iconLight {
     color: white;
 }
 
-.whiteColor{
+.whiteColor {
     color: white;
 }
-.darkColor{
+
+.darkColor {
     color: black;
 }
 
-.Arrows{
+.Arrows {
     display: flex;
 }
 
-.Arrows-arrow{
+.Arrows-arrow {
     border: 1px solid black;
     background-color: white;
-    padding: 10px;
+    padding: 20px;
     border-radius: 5px;
     margin-right: 5px;
     cursor: pointer;
 }
 
-.fixed-rigth{
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+.Search {
+    width: 800px;
+
+
+}
+#menu{
+    background-color: rgb(208, 208, 208);
 }
 
-.fixed-left{
+.Nav-capitulo  {
+
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+
+.Nav-capitulo a {
+    color: black;
+}
+
+.Nav-articulo a {
+    color: rgb(76, 76, 76);
+}
+
+.Search-form {
+    background-color: white;
+    display: flex;
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+
+.Search-form-search {
+    padding: 10px;
+    width: 97.4%;
+    height: 50px;
+    border-radius: 10px;
+    border: 0
+}
+
+.Search-form-lupa {
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: white;
+    border: 0;
+
+}
+
+
+
+
+.fixed-rigth {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.fixed-left {
     position: fixed;
     bottom: 20px;
     left: 20px;
 }
 
-.u-flexColumn{
+.u-flexColumn {
     flex-direction: column;
 }
 
-.isnot-active{
+.u-centrar {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.u-blur {
+    filter: blur(3.5px);
+}
+
+.isnot-active {
     display: none;
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 900px) {
 
-    .Container-menu{
-        
+    .Search {
+        width: 500px;
+
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .Search {
+        width: 300px;
+
+
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .Container-menu {
+
         position: fixed;
         left: 0;
         width: 90vh;
         top: 0;
         height: 100vh;
-        
+
 
 
     }
 
+}
+
+@media screen and (max-width: 600px) {
+
+    .Search {
+        width: 300px;
+
+
+    }
 }

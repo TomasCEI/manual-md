@@ -9,33 +9,6 @@ const contentDiv = document.getElementById("content");
 
 
 
-// ------------------  INI OBTENER CAPITULOS DE UN ARRAY (TEMPORAL) ------------------ //
-
-// ESTA PORCIÓN DE CÓDIGO ES TEMPORAL, SE VA A QUITAR Y OBTENER TODA LA INFOMRACION DESDE EL INDEX.JSON
-// Lista de capitulos con carpetas
-
-const A_capitulos2 = [
-    "css/introduccion.md", "css/contenido.html", "css/contenido.md",
-    "html-basico/intro.md", "html-basico/capitulo2.md", "html-basico/capitulo3.md","html-basico/capitulo4.html",
-
-    "java-script/introduccion.md", "java-script/final.md"
-];
-// según la estructura de archivos y carpetas, organiza los archivos en un objeto con los capítulos como propiedades y las secciones como valores de cada propiedad.
-function organizeChapters(filesArray) {
-    const chapters = {};
-
-    filesArray.forEach(file => {
-        const [chapter, section] = file.split('/');
-        if (!chapters[chapter]) {
-            chapters[chapter] = [];
-        }
-        chapters[chapter].push({ section, file });
-    });
-    return chapters;
-}
-const A_ListaCapitulosTemp = organizeChapters(A_capitulos);
-console.log(A_ListaCapitulosTemp);
-
 // ------------------  FIN OBTENER CAPITULOS DE UN ARRAY (TEMPORAL) ------------------ //
 
 
@@ -225,14 +198,26 @@ function imprimirTarjetas() {
                 const articuloPrevSlug = articuloSlug; // proximamente
                 const articuloNextSlug = articuloSlug; // proximamente
                 const readTime = Math.round(htmlGenerado.length / 1000);
-                const customHTML = `<div class="Card" id="${articuloSlug}">
-                                    <div class="Card-reading-time">Lectura: ${readTime}min<div>
-                                    <h1>${articuloTitle}</h1>
-                                    ${htmlGenerado}
-                                    <form><label><input id="check_leido_${articuloSlug}" class="tf_leido" type="checkbox"> Marcar como leído</label></form>
-                                    <a href="#${articuloPrevSlug}" class="Card-btn Card-btn--primary">Anterior</a>
-                                    <a href="#${articuloNextSlug}" class="Card-btn Card-btn--secondary">Siguiente</a>
-                                </div>`;
+                const customHTML = `<div style="margin-bottom:30px; border: 1px solid gray; padding:20px;" class="Card darkModeCard" id="${articuloSlug}">
+                                        <div class="SectionTop" style="display:flex; width:100%; justify-content:space-between; align-items:center;margin-bottom:20px">
+                                            <h1>${articuloTitle}</h1>
+                                            <div style="display:flex;flex-direction:column;">
+                                                <h3 style="padding:10px; border:1px solid gray; margin:0">Tiempo medio de lectura: X min %</h3>
+                                                <h3 style="padding:10px; border:1px solid gray; margin:0">Porcentaje leído: X %</h3>
+                                            </div>
+                                        </div>
+                                        <div id="keywords">Keyword1 ,Keyword2, Keyword3</div>
+
+                                        ${htmlGenerado}
+                                        <form>
+                                        <label>
+                                        <input id="check_leido_${articuloSlug}" class="tf_leido" type="checkbox"> Marcar como leído</label></form>
+                                        <div style="margin-top:20px; display:flex; justify-content:space-between">
+                                            <a href="#${articuloPrevSlug}" class="Card-btn Card-btn--primary" style="text-decoration:none; background-color:white; padding:10px; color:black; border-radius:5px">Anterior</a>
+                                            <a href="#${articuloNextSlug}" class="Card-btn Card-btn--secondary"  style="text-decoration:none; background-color:white; padding:10px; color:black; border-radius:5px">Siguiente</a>
+                                        </div>     
+                                    </div>
+                                    `;
                 contentDiv.innerHTML += customHTML;
             });
             addContentBeforePre();
