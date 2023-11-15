@@ -9,33 +9,7 @@ const contentDiv = document.getElementById("content");
 
 
 
-// ------------------  INI OBTENER CAPITULOS DE UN ARRAY (TEMPORAL) ------------------ //
 
-// ESTA PORCIÓN DE CÓDIGO ES TEMPORAL, SE VA A QUITAR Y OBTENER TODA LA INFOMRACION DESDE EL INDEX.JSON
-// Lista de capitulos con carpetas
-const A_capitulos = [
-    "docs-manual/1-intro.md", "docs-manual/markdown.md", "docs-manual/2-navegacion.md", "docs-manual/3-contenido.md", "docs-manual/4-javascript.md",
-    "diseno-web-css/introduccion.md", "diseno-web-css/contenido.html", "diseno-web-css/contenido.md",
-    "html/introduccion.md", "html/resultados.html", "html/final.md",
-    "java-script/introduccion.md", "java-script/final.md"
-];
-// según la estructura de archivos y carpetas, organiza los archivos en un objeto con los capítulos como propiedades y las secciones como valores de cada propiedad.
-function organizeChapters(filesArray) {
-    const chapters = {};
-
-    filesArray.forEach(file => {
-        const [chapter, section] = file.split('/');
-        if (!chapters[chapter]) {
-            chapters[chapter] = [];
-        }
-        chapters[chapter].push({ section, file });
-    });
-    return chapters;
-}
-const A_ListaCapitulosTemp = organizeChapters(A_capitulos);
-console.log(A_ListaCapitulosTemp);
-
-// ------------------  FIN OBTENER CAPITULOS DE UN ARRAY (TEMPORAL) ------------------ //
 
 
 
@@ -225,13 +199,20 @@ function imprimirTarjetas() {
                 const articuloNextSlug = articuloSlug; // proximamente
                 const readTime = Math.round(htmlGenerado.length / 1000);
                 const customHTML = `<div class="Card" id="${articuloSlug}">
-                                    <div class="Card-reading-time">Lectura: ${readTime}min<div>
-                                    <h1>${articuloTitle}</h1>
-                                    ${htmlGenerado}
-                                    <form><label><input id="check_leido_${articuloSlug}" class="tf_leido" type="checkbox"> Marcar como leído</label></form>
-                                    <a href="#${articuloPrevSlug}" class="Card-btn Card-btn--primary">Anterior</a>
-                                    <a href="#${articuloNextSlug}" class="Card-btn Card-btn--secondary">Siguiente</a>
-                                </div>`;
+                                        <div class="Card-reading-time">Lectura: ${readTime}min</div>
+                                        <div class="Card-keywords">
+                                            <ul>
+                                                <li><a class="Keyword" herf="#"># Key 1</a></li>
+                                                <li><a class="Keyword" herf="#"># Key 2</a></li>
+                                                <li><a class="Keyword" herf="#"># Key 3</a></li>
+                                            </ul>
+                                        </div>
+                                        <h1>${articuloTitle}</h1>
+                                        ${htmlGenerado}
+                                        <form><label><input id="check_leido_${articuloSlug}" class="tf_leido" type="checkbox"> Marcar como leído</label></form>
+                                        <a href="#${articuloPrevSlug}" class="Card-btn Card-btn--primary"></a>
+                                        <a href="#${articuloNextSlug}" class="Card-btn Card-btn--secondary"></a>
+                                    </div>`;
                 contentDiv.innerHTML += customHTML;
             });
             addContentBeforePre();
