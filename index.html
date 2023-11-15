@@ -45,9 +45,6 @@
         </svg>-->
     </a>
 
-    <header class="Container-header">
-        <h1 style="    font-weight: 900;">MANUAL CON OBTENCIÓN DE CÓDIGO</h1>
-    </header>
 
     <div id="container" class="Container">
 
@@ -63,7 +60,16 @@
             </div>
         </nav>
 
-        <div id="content" class="Container-content"></div>
+        <div id="content" class="Container-content">
+
+            <header class="Container-header">
+                <h1 style="font-weight: 900; ">MANUAL CON OBTENCIÓN DE CÓDIGO</h1>
+                <form action="index.html" method="get">
+                    <input type="text">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i></button>
+                </form>
+            </header>
+        </div>
 
 
 
@@ -122,16 +128,17 @@
 
     window.addEventListener("resize", function () {
         console.log("AUHBAIHJ")
-        if (window.innerWidth < 500){
+        if (window.innerWidth < 500) {
             menu.classList.add("isnot-active");
 
             var section = document.getElementById("SectionTop");
             section.classList.add("u-flexColumn");
-        }else{
+
+        } else {
             var section = document.getElementById("SectionTop");
             section.classList.remove("u-flexColumn");
         }
-           
+
     });
 
     function mostrarMenu() {
@@ -146,7 +153,7 @@
 
     }
     function cambioModo() {
-    
+
         const cards = document.querySelectorAll('.card');
 
         if (cont == 0) {
