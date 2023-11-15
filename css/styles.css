@@ -9,6 +9,7 @@
     list-style: none;
     font-family: 'Rubik';
     font-size: 13px;
+
 }
 
 :root {
@@ -16,17 +17,27 @@
     --default-color-01: #9cb4f4 ;
     --default-color-02: #6472a4;
     --default-background: #dadada;
+    --default-background02: #ffffff;
+}
 
-    --light-font-color: #6472a4;
-    --light-color-01: #9cb4f4 ;
-    --light-color-02: #dadada;
-    --light-background: #ffffff;
+.light-mode{
+    --default-font-color: #6472a4;
+    --default-color-01: #9cb4f4 ;
+    --default-color-02: #dadada;
+    --default-background: #ffffff;
+    --default-background02: #dadada;
 
+    transition: background-color .5s;
+}
 
-    --dark-font-color: #dadada;
-    --dark-color-01: #363960 ;
-    --dark-color-02: #9cb4f4;
-    --dark-background: #6472a4;
+.dark-mode{
+    --default-font-color: #dadada;
+    --default-color-01: #363960 ;
+    --default-color-02: #9cb4f4;
+    --default-background: #6472a4;
+    --default-background02: #363960;
+rgba(255, 255, 255, 0)
+    transition:background-color .5s;
 }
 
 .header{
@@ -46,13 +57,14 @@
     text-align: center;
     text-transform: uppercase;
     color: var(--default-font-color);
+    width: 40%;
+    text-align: start;
 }
 
 .headerSearch{
     position: absolute;
-    padding: 1em;
-    justify-content: center;
-    align-items: center;
+    padding: 5px;
+    margin-top: -25px;
 }
 
 .headerSearch input{
@@ -91,12 +103,51 @@
     width: 240px;
 }
 
-.headerButton{
+button{
+    all: unset;
+ }
+
+.headerMenu{
     background-color: transparent;
     border: 0cap;
     font-family: 'Rubik';
-    font-size: 20px;
-    
     color: var(--default-font-color);
 }
 
+ 
+.headerBtns{
+    width: 150px;
+    text-align: end;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.headerBtn{
+    color: var(--default-background);
+    font-size: 30px;
+    padding: 2%;
+}
+
+.headerMenuHide{
+    display: none;
+}
+
+.menuCapitulos{
+    position: fixed;
+    top: 100;
+    left: 100;
+}
+
+.content{
+    background-color: var(--default-background02);
+    border-radius: 20px;
+    box-shadow: 5px 7px 14px 1px rgba(20, 20, 20, 0.1);;
+    padding: 2em;
+    margin: 2em;
+
+}
+
+.Card-reading-time{
+    font-weight: 300;
+    color: var(--default-color-02);
+}

@@ -27,46 +27,51 @@
 </head>
 
 <body>
-    <header class="header">
-        <h1 class="headerLogo">Manual</h1>
+    <div class="page" id="myPage">
 
-        <button class="headerButton">Capítulos</button>
-        <!-- <nav class="headerMenu">
-         <ul id="menuCapitulos"></ul>
-        </nav>-->
+        <header class="header">
 
-        <div>
-            <div class="headerSearch">
-                <input type="text" placeholder="Degradado en CSS" required>
-                <div>
-                    <i class="fa-solid fa-magnifying-glass"></i>
+            <button class="headerMenu" onclick="toggleBox()"><i class="fa-solid fa-bars headerBtn"></i></button>
+            
+
+            <h1 class="headerLogo">Manual</h1>
+
+
+            <div>
+                <div class="headerSearch">
+                    <input type="text" placeholder="Degradado en CSS" required>
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
                 </div>
             </div>
+            <div class="headerBtns">
+                <a href="#"><i class="fa-brands fa-github headerBtn"></i></a>
+                <button id="id-sun" onclick="toggleLight()"><i class="fa-solid fa-sun headerBtn"></i></button>
+                <button id="id-moon" onclick="toggleDark()"><i class="fa-solid fa-moon headerBtn"></i></button>
+            </div>
+        </header>
+
+        <nav class="headerMenuHide" id="myMenu">
+            <ul id="menuCapitulos"></ul>
+        </nav>
+
+        <!--animation full size-->
+
+        <div id="container">
+            <div class="content" id="content"></div>
         </div>
 
-        <a href="#"><i class="fa-brands fa-github"></i></a>
-
-    </header>
 
 
 
-    <!--animation full size-->
 
-    <div id="container">
-        <div class="content" id="content"></div>
+        <footer>
+            copywrited by <a href="#">me</a>
+        </footer>
 
 
     </div>
-
-
-
-
-
-    <footer>
-        copywrited by <a href="#">me</a>
-    </footer>
-
-
 
 
 
@@ -87,6 +92,34 @@
 
     <!-- Creación del Manual automático y lector de archivos .md y .html -->
     <script src="js/docs.js"></script>
+
+
+    <script>
+        //script romi
+        // Botón Light Mode
+        function toggleLight() {
+            var mode = document.getElementById('myPage');
+        mode.classList.toggle('light-mode');
+        mode.classList.remove('dark-mode');
+        }
+
+        // Botón Dark Mode
+        function toggleDark() {
+            var mode = document.getElementById('myPage');
+        mode.classList.toggle('dark-mode');
+        mode.classList.remove('light-mode');
+        }
+
+
+        // Historial en botón flotante
+        function toggleBox() {
+            var box = document.getElementById('myMenu');
+            box.style.display = (box.style.display === 'none' || box.style.display === '') ? 'block' : 'none';
+        }
+
+        
+
+    </script>
 </body>
 
 </html>
