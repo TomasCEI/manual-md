@@ -36,8 +36,6 @@
     --default-color-02: #9cb4f4;
     --default-background: #6472a4;
     --default-background02: #363960;
-rgba(255, 255, 255, 0)
-    transition:background-color .5s;
 }
 
 .header{
@@ -147,7 +145,16 @@ button{
 
 }
 
+.Card-title{
+color: var(--default-font-color);
+font-size: 30px;
+font-weight: 900;
+padding: 1em;
+}
+
 .Card-reading-time{
     font-weight: 300;
+    font-size: 18px;
     color: var(--default-color-02);
+    margin: 1em;
 }
