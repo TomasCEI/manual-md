@@ -38,7 +38,10 @@
         </header>
 
         <div class="contenedor" style="display:flex;">
-            <button class="btnDark" onclick="myFunction()">Dark</button>
+            <div class="Btns">
+                <button class="btnDark" onclick="Dark()">Dark</button>
+                <button class="btnLight" onclick="Light()">Light</button>
+            </div>
             <nav class="barra">
                 <!-- Nav de ejemplo: 
                     <ul>
@@ -83,9 +86,13 @@
     <script src="js/docs.js"></script>
 
     <script>
-        function myFunction() {
+        function Dark() {
            var element = document.body;
            element.classList.toggle("dark-mode");
+        }
+        function Light() {
+           var element = document.body;
+           element.classList.toggle("light-mode");
         }
         </script>
 </body>

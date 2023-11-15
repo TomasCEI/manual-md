@@ -23,17 +23,43 @@ header{
     --color-text:white;
   }
 
+.light-mode{
+    --color-primary:aqua;
+    background-color:red;
+    --color-text:purple;
+}
+
+.Btns{
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+}
+
 .btnDark{
-    width: 200px;
+    width: 50px;
     height: 50px;
     border-radius: 10px;
     border: 0;
     background-color: var(--color-third);
 }
 
-.btnDark:hover{
-    background-color: var(--color-secondary);
+.btnLight{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0;
+    background-color: var(--color-third);
 }
+
+.btnDark:hover,.btnLight:hover{
+    background-color:red;
+}
+
+.btnDark:focus,.btnLight:focus{
+    background-color:black;
+    color:white;
+}
+
 .card{
     width: 70%;
     margin-left: 5%;
