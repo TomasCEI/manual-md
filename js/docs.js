@@ -206,7 +206,9 @@ function imprimirTarjetas() {
                                                 <h3 style="padding:10px; border:1px solid gray; margin:0">Porcentaje leído: X %</h3>
                                             </div>
                                         </div>
-                                        <div id="keywords">Keyword1 ,Keyword2, Keyword3</div>
+                                        <div id="keywords">
+                                            <span>Keyword1 ,Keyword2, Keyword3
+                                        </div>
 
                                         ${htmlGenerado}
                                         <form>
