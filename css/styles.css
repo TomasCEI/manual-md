@@ -3,20 +3,25 @@
 :root {
 
 --background-color: #F5E9E2;
+--background-color2: #a56c7a;
 --title-color: #773344;
 --second-color: #E3B5A4;
 --third-color: #D44D5C;
 --letters-color: white;
+--dark-color: rgb(26, 26, 37);
+--darkMenu-color: rgb(23, 23, 40);
+--light-color:white;
+--lightMenu-color: rgb(167, 140, 140);
 
 }
 
-body{ background-color: #b08691;
+body{ 
 overflow-x: hidden;}
 
 /* Boton modo oscuro*/
 
 .dark-mode {
-    background-color: black;
+    background-color: var(--dark-color);
     color: white;}
 
 .darkModeBtn { font-family: 'Courier New', Courier, monospace;
@@ -25,6 +30,33 @@ overflow-x: hidden;}
     color: var(--letters-color);
 }
 /*...................*/
+
+
+/* Boton modo claro*/
+
+.light-mode {
+    background-color: var(--light-color);
+    color: black;}
+
+.lightModeBtn { font-family: 'Courier New', Courier, monospace;
+    background-color: var(--title-color);
+    font-size: 20px;
+    color: var(--letters-color);}
+/*..................*/
+
+/*Boton personalizado*/
+
+.personal-mode {
+    background-color: var(--background-color2);
+    color: black;}
+
+.personalModeBtn { font-family: 'Courier New', Courier, monospace;
+    background-color: var(--title-color);
+    font-size: 20px;
+    color: var(--letters-color);}
+
+    /*......................*/
+
 
 #container {max-width: 90%;}
 #content {max-width: 80%;
@@ -37,9 +69,12 @@ overflow-x: hidden;}
   }
 
 header{ 
+
     background-color: var(--title-color);
     padding: 20px;
+    width: 600px;
     justify-content: center;
+ 
     margin-bottom: 40px;
     border-radius: 20px;}
 
@@ -107,3 +142,32 @@ max-width: 300px;}
     color: black;
 }
 
+
+@media screen and (max-width:900px) {
+
+
+
+    .navMenu{ width: 100%;}
+
+    .contenido{ width: calc(70% - 16px) }
+
+    header{ width: 100%;}
+
+    .github-corner{ width: 100%;}
+
+    .contenido h1 h2 table a{ width: 100%;}
+}
+
+@media screen  and (max-width:700px){
+
+    .navMenu{ width: 100%;}
+
+    .contenido{ width: 100%; }
+
+    header{ width: 100%;}
+
+    .github-corner{ width: 100%;}
+
+    .contenido h1 h2 table a{ width: 100%;}
+    
+}
