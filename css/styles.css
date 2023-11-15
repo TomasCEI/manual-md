@@ -12,9 +12,9 @@
     --background-02: rgb(230, 242, 245); 
     --background-03: rgba(255,131,176,.5);
     --background-04: rgb(250, 250, 250);
-    --gradient: linear-gradient(315deg, #e96195ad 0%, #ffffff 74%);
+    --gradient: #e9619541;
     --primary-color: #f63e7c;
-    --secundary-color: grey;
+    --secundary-color: rgb(73, 73, 73);
     
 
     /* Tipografía*/
@@ -25,11 +25,14 @@
     --body02: 16px;
     --helper: 12px;
 
+    --weight:100;
+
+
 
 }
 
 .menu ul li a{
-    font-weight: lighter;
+    font-weight: var(--weight);
     display: flex;
 padding: 16px;
 
@@ -48,19 +51,20 @@ nav  ul  li {
 }
 
 
-     
+.Nav-capitulo a {
+    background-color: var(--gradient);
+    color: #f63e7c;
+    
+}
 
-
-
-
-
-.h1{
-
-
-
-    font-size: var(--heading01);
+.Nav-articulo a {
+    background-color: white;
 
 }
+
+
+
+
 
 .body {
     margin: 0;
@@ -73,10 +77,8 @@ nav  ul  li {
     height: auto;
     min-height: 900px;
     
- 
   
 }
-
 
 
 
@@ -99,9 +101,6 @@ nav > ul > li > ul > li {
 
 
 
-
-
-
 .contenido {
     display: flex;
     flex-direction: row;
@@ -114,4 +113,24 @@ nav > ul > li > ul > li {
 #container {
     margin: 0px;
     max-width: 100vw;
+}
+
+
+header {
+    border-bottom: solid 1px var(--gradient);
+    align-items: center;
+    justify-content: baseline;
+}
+
+header h1 {
+
+    font-size: var(--heading01);
+    color: var(--secundary-color);
+    height: 60px;
+    justify-content: center;
+    margin-left: 20px;
+   
+  
+
+
 }
