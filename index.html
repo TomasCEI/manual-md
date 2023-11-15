@@ -6,6 +6,8 @@
     <title>Manual HTML+CSS+JS</title>
 
     <link rel="icon" href="imgs/github.svg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <!-- para highlight de sytanx-->
     
@@ -32,8 +34,16 @@
     <div id="container">
         
         <header>
-            <h1 class="title">Manual con Obtención de código</h1>
-        </header>
+            <h1 class="title">Manual con Obtención de código</h1>                     
+            <button class="darkModeBtn" onclick="myFunction()"><span class="material-symbols-outlined">
+                dark_mode
+                </span></button>
+            <button class="lightModeBtn" onclick="myFunction2()"><span class="material-symbols-outlined">
+                light_mode
+                </span></button>
+
+            
+        </header> 
 
         <div class="containerMenu">
             <nav class="navMenu">
@@ -55,10 +65,6 @@
                 -->
 
                     <ul class="menu" id="menuCapitulos"></ul>
-                    <br>
-                    <button class="darkModeBtn" onclick="myFunction()">Modo oscuro</button>
-                    <button class="lightModeBtn" onclick="myFunction2()">Modo claro</button>
-                    <button class="personalModeBtn" onclick="myFunction3()">Modo personalizado</button>
             </nav>
             <div class="contenido" id="content"></div>
         </div>
@@ -79,11 +85,10 @@
         function myFunction2() {
            var element = document.body;
            element.classList.toggle("light-mode");
+
+        
         }
-        function myFunction3() {
-           var element = document.body;
-           element.classList.toggle("personal-mode");
-        }
+ 
         </script>
 
     
