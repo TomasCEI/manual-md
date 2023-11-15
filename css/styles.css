@@ -5,18 +5,24 @@ body{
 }
 
 
-.header{
+.Header{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-.menu {
+.Menu {
     display: flex;
+    flex-wrap: nowrap;
+    width: 600px;
+   
+   
+    overflow: auto;
+    white-space: nowrap;
     
 }
 
-.banner {
+.Banner {
     display: flex;
     background-image: url("https://img.freepik.com/foto-gratis/experiencia-programacion-persona-que-trabaja-codigos-computadora_23-2150010144.jpg?w=1360&t=st=1699979341~exp=1699979941~hmac=51c77e12d7554448fb9dc6c09fac85ccaf606b343dd2327f1b473647f47fbbc0");
     height: 500px;
@@ -28,7 +34,7 @@ body{
     
 }
 
-.main{
+.Main{
     
     display: flex;
     justify-content: space-around;
@@ -41,7 +47,7 @@ body{
     margin-left:3rem;
 }
 
-.search {
+.Search {
     margin-right: 3rem;
 }
 
@@ -52,10 +58,147 @@ body{
 }
 
 
-.info{
+.Info{
     background-color: rgb(149, 117, 205, 0.3);
     margin-right: 5rem;
     border-radius: 3%;
     padding: 2rem;
+    overflow: auto;
+    height: 300px;
     
 }
+.Card {
+    border: 2px solid blue;
+    margin: 3rem;
+    padding: ;
+  }
+
+
+.Nav-capitulo{
+    color: black;
+    list-style: none;
+    
+   }
+
+.Nav-capitulo ul {
+    list-style: none;
+    color: red;
+  
+}
+
+.Nav-capitulo a {
+    list-style: none;
+    color: rgb(8, 0, 255);
+   
+  
+}
+
+
+ .Nav-capitulos{
+    color: red;
+    list-style: none;
+
+}
+
+
+
+.tf_leido{
+    margin: 2rem;
+
+}
+.Card-btn.Card-btn--primary{
+    color: blue;
+    background-color: greenyellow;
+    border-radius: 10%;
+    padding: 3%;
+    margin: 5%;
+}
+
+
+.Card-btn.Card-btn--primary::after {
+content: "Previous";
+
+}
+
+.Card-btn.Card-btn--secondary::before{
+    content: "Next";
+
+}
+
+
+.Menu ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+   }
+   
+   /* items del menu */
+   
+.Menu ul li {
+    background-color:#1100ff;
+   }
+   
+   /* enlaces del menu */
+   
+.Menu ul a {
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    font-weight:400;
+    font-size:14px;
+    
+    
+   
+    font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    
+    letter-spacing:1px;
+   }
+
+   .Menu ul a:hover{
+    color: rgb(0, 255, 17);
+   }
+   
+   /* items del menu */
+   
+.Menu ul li {
+    position:relative;
+    float:left;
+    margin:0;
+    padding:0;
+   }
+   
+   /* efecto al pasar el ratón por los items del menu */
+   
+.Menu ul li:hover {
+    background:#5b78a7;
+   }
+
+
+.Menu ul ul {
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:#eee;
+    padding:0;
+   }
+   
+   /* items del menu desplegable */
+   
+.Menu ul ul li {
+    float:none;
+    width:150px
+   }
+   
+   /* enlaces de los items del menu desplegable */
+   
+.Menu ul ul a {
+    line-height:120%;
+    padding:10px 15px;
+   }
+   
+   /* items del menu desplegable al pasar el ratón */
+   
+.Menu ul li:hover > ul {
+    display:block;
+   }
