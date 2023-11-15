@@ -130,3 +130,8 @@ header{
     margin-left: 5%;
     margin-right: 5%;
 }
+
+.tf_leido{
+    cursor: pointer;
+    background-color: #fff;
+}
