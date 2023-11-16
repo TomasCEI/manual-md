@@ -1,4 +1,9 @@
-/* Hoja de estilos de alumnos */
+1/* Hoja de estilos de alumnos */
+
+.body {
+ display: flex;
+ flex-direction: column;   
+}
 
 .Topnav{ background-color: rgb(104, 174, 186);
     display: flex;
@@ -57,13 +62,17 @@
       }
 
       .container {
-        width: 80%;
-        max-width: 1200px;
-        margin-top:80px;
-        padding: 40px;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;  
-        background-color: black;
+      background-color: blueviolet;
       }
-    
+      
+    .titulo {
+        background-color: antiquewhite;
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+    }
+     
+      .menuCapitulos {
+       margin-top: 50px; 
+       background-color: antiquewhite;
+      }
