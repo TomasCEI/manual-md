@@ -155,11 +155,7 @@ button{
 }
 
 .content{
-    background-color: var(--default-background02);
-    border-radius: 20px;
-    box-shadow: 5px 7px 14px 1px rgba(20, 20, 20, 0.1);
-    padding: 2em;
-    margin: 2em;
+    
 }
 
 .Card-reading-time{
@@ -184,6 +180,11 @@ margin: 2em;
 }
 
 .Card{
+    background-color: var(--default-background02);
+    border-radius: 20px;
+    box-shadow: 5px 7px 14px 1px rgba(20, 20, 20, 0.1);
+    padding: 2em;
+    margin: 2em;
     color: var(--default-font-color);
     margin-bottom: 200px;
 }
@@ -282,6 +283,7 @@ margin: 2em;
         padding: 0.4em;
         border-radius: 5px;
         margin: 1em;
+        cursor: pointer;
     }
 
     .Form-checkbox{
@@ -295,6 +297,7 @@ margin: 2em;
         gap: 10px;
         width: 170px;
         box-shadow: 5px 7px 14px 1px rgba(20, 20, 20, 0.1);
+        cursor: pointer;
     }
 
     .footer{
