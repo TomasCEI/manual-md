@@ -25,7 +25,7 @@ body{
 .Banner {
     display: flex;
     background-image: url("https://img.freepik.com/foto-gratis/experiencia-programacion-persona-que-trabaja-codigos-computadora_23-2150010144.jpg?w=1360&t=st=1699979341~exp=1699979941~hmac=51c77e12d7554448fb9dc6c09fac85ccaf606b343dd2327f1b473647f47fbbc0");
-    height: 500px;
+    height: 300px;
     color: white;
     justify-content: center;
   
@@ -39,16 +39,19 @@ body{
     display: flex;
     justify-content: space-around;
     flex-direction: row;
+    height: 120%;
 
 
 
 }
 .BoxImput{
-    margin-left:3rem;
+    margin-left:1.5rem;
+    margin-right: 1.5rem;
+    position:static;
 }
 
 .Search {
-    margin-right: 3rem;
+    margin-right: 1.5rem 0 1.5rem 0;
 }
 
 .InfoArticulos{
@@ -107,6 +110,13 @@ body{
 
 }
 .Card-btn.Card-btn--primary{
+    color: blue;
+    background-color: greenyellow;
+    border-radius: 10%;
+    padding: 3%;
+    margin: 5%;
+}
+.Card-btn.Card-btn--secondary{
     color: blue;
     background-color: greenyellow;
     border-radius: 10%;
@@ -202,3 +212,28 @@ content: "Previous";
 .Menu ul li:hover > ul {
     display:block;
    }
+
+.Card {
+    display: flex;
+   flex-direction: column;
+   align-content: center;
+}
+
+.Card img {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+
+
+
+}
+.Card-keywords ul{
+    text-decoration:none;
+
+}
+.Card .Card-title {
+    display: flex;
+    justify-content: space-around;
+    background-color: #1100ff;
+}
+
