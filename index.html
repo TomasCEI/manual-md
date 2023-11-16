@@ -50,6 +50,10 @@
 
 
         <nav id="menu" class="Container-menu">
+            <button class="Container-header-search" onclick="mostrarBuscador()">
+                <span style="margin-right: 10px;">Buscador Command+K</span>
+                <i class="fa-solid fa-magnifying-glass" ></i>
+            </button>
             <ul id="menuCapitulos"></ul>
             <div style="display: flex; align-items: center; margin-left: 10px;">
                 <i class="fa-solid fa-circle-half-stroke iconDark"
@@ -62,12 +66,9 @@
 
         <div id="content" class="Container-content">
 
-            <header class="Container-header">
+            <header id="head" class="Container-header">
                 <h1 style="font-weight: 900; ">MANUAL CON OBTENCIÓN DE CÓDIGO</h1>
-                <button class="Container-header-search" onclick="mostrarBuscador()">
-                    <span style="margin-right: 10px;">Buscador Command+K</span>
-                    <i class="fa-solid fa-magnifying-glass" ></i>
-                </button>
+           
             </header>
         </div>
 
@@ -131,6 +132,7 @@
     var menu = document.getElementById("menu");
     var arrow1 = document.getElementById("arrow1");
     var arrow2 = document.getElementById("arrow2");
+    var content = document.getElementById("content");
 
     var buscador = document.getElementById("Search");
 
@@ -217,7 +219,7 @@
     function mostrarBuscador(){
 
         buscador.classList.toggle("isnot-active");
-        menu.classList.toggle("u-blur");
+        content.classList.toggle("u-blur");
         const cards = document.querySelectorAll('.Card')
         cards.forEach(card => {
             
