@@ -29,12 +29,14 @@ header{
     --color-secondary:#685d75;
     background-color:black;
     --color-text:white;
+    --color-fourth:white;
   }
 
 .light-mode{
-    --color-primary:aqua;
-    background-color:red;
+    --color-primary:#ffffff;
+    --color-secondary:#e0dfe0;
     --color-text:purple;
+    --color-fourth:black;
 }
 
 .Btns{
@@ -221,12 +223,19 @@ header{
         font-size: 20px;
     }
     .contenedor{
-        width: 80%;
+        width: 100%;
         flex-direction: column;
         display: flex;
     }
     .barra{
+        height: 100px;
         width: 100%;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+    }
+
+    .barra::-webkit-scrollbar {
+        -webkit-appearance: none;
     }
 
     .barra a, ul{
