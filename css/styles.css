@@ -130,31 +130,153 @@ button{
     display: none;
 }
 
-.menuCapitulos{
+#menuCapitulos{
     position: fixed;
-    top: 100;
-    left: 100;
+    top: 100px;
+    left: 50px;
+    background-color: var(--default-background02);
+    padding: 1em;
+    border-radius: 20px;
+    box-shadow: 5px 7px 14px 1px rgba(20, 20, 20, 0.1);
+}
+
+.Nav-capitulo a{
+    color: var(--default-font-color);
+    font-size: 15px;
+}
+
+.Nav-articulo a{
+    color: var(--default-color-02);
+    font-size: 12px;
 }
 
 .content{
     background-color: var(--default-background02);
     border-radius: 20px;
-    box-shadow: 5px 7px 14px 1px rgba(20, 20, 20, 0.1);;
+    box-shadow: 5px 7px 14px 1px rgba(20, 20, 20, 0.1);
     padding: 2em;
     margin: 2em;
-
-}
-
-.Card-title{
-color: var(--default-font-color);
-font-size: 30px;
-font-weight: 900;
-padding: 1em;
 }
 
 .Card-reading-time{
     font-weight: 300;
-    font-size: 18px;
-    color: var(--default-color-02);
+    font-size: 15px;
+    color: var(--default-font-color);
     margin: 1em;
 }
+
+.Card-keywords ul{
+display: flex;
+margin: 2em;
+}
+
+.Keyword{
+    
+    list-style-type: disc;
+    background-color: var(--default-color-01);
+    padding: 0.4em;
+    border-radius: 5px;
+    color: var(--default-background02);
+    margin: 1em;
+}
+
+.Card{
+    color: var(--default-font-color);
+    margin-bottom: 200px;
+}
+
+.Card h1{
+    font-size: 20px;
+    font-weight: 500 ;
+    margin-bottom: 1em;
+    padding: 1rem;
+    
+}
+
+.Card h2{
+    font-size: 18px;
+    font-weight: 500 ;
+    margin-bottom: 1em;
+    padding: 0.5rem;
+    color: var(--default-color-02);
+}
+
+.Card h3{
+    font-size: 15px;
+    font-weight: 500 ;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    color: var(--default-color-02);
+}
+
+.Card h4{
+    font-size: 13px;
+    font-weight: 500 ;
+    margin-bottom: 1rem;
+    padding: 0.5em;
+    color: var(--default-color-02);
+}
+
+.Card h5{
+    font-size: 11px;
+    font-weight: 500 ;
+    margin-bottom: 1rem;
+    padding: 0.5em;
+    color: var(--default-color-02);
+}
+
+.Card h6{
+    font-size: 10px;
+    font-weight: 500 ;
+    margin-bottom: 1rem;
+    padding: 0.5em;
+    color: var(--default-color-02);
+}
+
+.Card hr{
+    display: none;
+}
+
+.Card p{
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 1em;
+}
+
+.Card img{
+    align-items: center;
+    justify-content: center;
+}
+
+.Card-title{
+    color: var(--default-font-color);
+    font-size: 35px;
+    font-weight: 900;
+    padding: 1rem;
+    text-align: center;
+    }
+
+    .code-title{
+        font-size: 15px;
+    font-weight: 500 ;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    }
+
+
+    .language-markdown{
+        border-radius: 10px;
+    }
+
+    .bloque-copy{
+        text-transform: uppercase;
+        color: var(--default-color-02);
+        font-weight: 300;
+        font-size: 15px;
+        margin-left: 20px;
+        background-color: var(--default-background);
+        padding: 0.4em;
+        border-radius: 5px;
+        margin: 1em;
+    }
