@@ -204,7 +204,7 @@ function imprimirTarjetas() {
                                         <div class="Card-keywords">
                                             <ul>
                                                 <li><a class="Keyword" herf="#"># Key 1</a></li>
-                                                <li><a class="Keyword" herf="#"># Key 2</a></li>
+                                                <li><a class="Keyword u-margins" herf="#"># Key 2</a></li>
                                                 <li><a class="Keyword" herf="#"># Key 3</a></li>
                                             </ul>
                                         </div>
