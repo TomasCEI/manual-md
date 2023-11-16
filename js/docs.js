@@ -202,8 +202,8 @@ function imprimirTarjetas() {
                                         <div class="SectionTop" style="display:flex; width:100%; justify-content:space-between; align-items:center;margin-bottom:20px">
                                             <h1>${articuloTitle}</h1>
                                             <div style="display:flex;flex-direction:column;">
-                                                <h3 style="padding:10px; border:1px solid gray; margin:0">Tiempo medio de lectura: X min %</h3>
-                                                <h3 style="padding:10px; border:1px solid gray; margin:0">Porcentaje leído: X %</h3>
+                                                <h3 style="padding:10px; border:1px solid gray; margin:0;text-align:center">Tiempo medio de lectura: X min %</h3>
+
                                             </div>
                                         </div>
                                         <div id="keywords">
