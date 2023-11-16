@@ -1,15 +1,18 @@
 /* Hoja de estilos de alumnos */
 :root {
-    --bg-color: #f5f5f5;
+    --bg-color: #bfc0c0;
     --input-color: #111;
-    --titles-color: #fca311;
-    --nav-bg-color: #98c1d9;
+    --titles-color: #ef8354;
+    --nav-bg-color: #e4d9ff;
     --art-color: #e5e5e5;
+    --font-white-color: #ffffff;
+    --font-dark-color: #30343f;
+    --container-color: #fafaff;
 }
 
 body {
-    font-family: Mulish, sans-serif;
-    background-color: var(--input-color);
+    font-family: Arial, sans-serif, Times, serif, sans-serif;
+    background-color: var(--font-dark-color);
     font-size: 16px;
     padding: 16px;
     height: 100%;
@@ -31,12 +34,13 @@ html {
     margin-left: 9rem
 }
 .menu {
-    background: var(--bg-color);
+    background: var(--dark-bg-color);
 }
 #container {
     display:flex;
     height:100vh;
-    margin-left: 0.2rem;
+    margin-left: 1rem;
+    max-width: 80rem;
 }
 
 #content {
@@ -44,7 +48,32 @@ html {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    background: var(--dark-bg-color);
+    background: var(--container-color);
+}
+
+.Card-title {
+    background-color: var(--nav-bg-color);
+}
+
+.Card-reading-time {
+    background-color: var(--dark-content-container-color);
+    background: var(--dark-content-container-color);
+}
+
+.Card-buttons {
+min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background: var(--dark-nav-bg-color);
 }
 
 header {
@@ -52,16 +81,66 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #333;
+    background-color: var(--bg-color);
     color: white;
     margin-bottom: 20px;
+    text-shadow: 5px 5px 10px rgba(16, 20, 245, 0.4);
+    color: var(--dark-bg-color);
 }
 
+.button-dark-mode {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+    background: #adb5bd;
+}
+
+.button-dark-mode:hover {
+    background-color: #ced4da;
+}
+
+.button-dark-mode:active {
+    top: 2px;
+}
+
+.button-dark-mode {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+    background: var(--bg-color);
+  }
+  .button-dark-mode:hover {
+    background-color: #ced4da;
+  }
+  .button-dark-mode--active:active {
+    top: 2px;
+  }
 .dark-mode {
-    --dark-bg-color: #14213d;
-    --input-color: #ffffff;
-    --nav-bg-color: #e5e5e5;
-    --titles-color: #fca311;
+    --dark-bg-color: #22223b;
+    --dark-input-color: #f2e9e4;
+    --dark-nav-bg-color: #c9ada7;
+    --dark-titles-color: #98c1d9;
+    --dark-content-container-color: #4a4e69;
 
 }
 .checkbox {
@@ -135,6 +214,9 @@ header {
     flex-direction: column;
     background-color: var(--nav-bg-color);
     transition: max-width 0.1s ease-in-out;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    list-style-type: none;
+
     
    
 }
@@ -148,18 +230,19 @@ header {
     
 }
 
+
 .search__wrapper input {
     background-color: var(--bg-color);
     height: 40px;
     width: 100%;
     border-radius: 8px;
-    padding: 0 8px;
-    padding-left: 40px;
-    flex-grow: 1;
+    padding: 8px;
     outline: none;
     border: none;
+    color: var(--input-color);
 }
 
+/*
 .search__wrapper svg {
     position: absolute;
     z-index: 3;
@@ -169,7 +252,7 @@ header {
     pointer-events: none;
     right: 80px
 }
-
+*/
 
 #checkbox-container {
     width: 10px;
@@ -216,17 +299,23 @@ article h2 {
     color: #333;
 }
 
-article .keywords {
+#Card-keywords ul {
+    list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     margin-top: 10px;
+    
 }
 
-article .keyword-chip {
-    background-color: #ddd;
+.Card-Keywords li {
+    background-color: var(--bg-color);
     padding: 5px 10px;
     margin: 5px;
     border-radius: 5px;
+}
+
+.Card-keywords a {
+    color: var(--dark-bg-color);
 }
 
 article .reading-time {
