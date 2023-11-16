@@ -29,9 +29,10 @@ overflow-x: hidden;}
 
 .darkModeBtn { font-family: 'Courier New', Courier, monospace;
     background-color: var(--title-color);
- 
     padding: 10px;
     border-radius: 30px;
+    width: 70px;
+    height: 60px;
     color: var(--letters-color);}
 
 .dark-mode .material-symbols-outlined {
@@ -58,7 +59,9 @@ overflow-x: hidden;}
 .lightModeBtn { font-family: 'Courier New', Courier, monospace;
     background-color: var(--title-color);
     padding: 10px;
-    border-radius: 50%;
+    border-radius: 30px;
+    width: 70px;
+    height: 60px;
     color: var(--letters-color);}
 
 .light-mode .material-symbols-outlined {
@@ -168,6 +171,11 @@ max-width: 300px;}
     color: var(--dark-color);
 }
 
+footer{ color: var(--dark-color);
+display: flex;
+justify-content: center;
+margin-top: 30px;}
+
 /*--------------Responsive Tablet--------------------*/
 
 
@@ -178,13 +186,21 @@ max-width: 300px;}
     header{ width: 90%;
     align-items: center;}
 
-    .title {font-size: 20px;}
+    .title {font-size: 16px;}
 
     .containerMenu {flex-direction: column;
-    width: 750px;}
+   }
 
     #content{ justify-content: center;
-    width: 100%;}
+  }
+
+    .darkModeBtn{    
+        width: 60px;
+       height: 50px;}
+
+   .lightModeBtn{  
+           width: 60px;
+           height: 50px; }
 
 
 }
@@ -201,7 +217,8 @@ max-width: 300px;}
     #content h1{font-size: 18px;}
 
     #content{ justify-content: center;
-    width: 80%;}
+    width: 80%;
+margin: 0 auto;}
 
     #content img{ 
         width: 90%;}
@@ -214,6 +231,7 @@ max-width: 300px;}
 
 @media screen and (max-width:450px) {
 
+   
     nav { display: none; }
 
     header{ width: 90%;
@@ -222,7 +240,7 @@ max-width: 300px;}
     .title {font-size: 14px;}
 
     .containerMenu {flex-direction: column;
-    width: 750px;}
+   }
 
     #content{ justify-content: center;
     max-width: 80%;
@@ -231,5 +249,14 @@ max-width: 300px;}
     #content img{ 
         width: 90%;}
 
-    .github-corner{}
+    .github-corner{ width: 40px;
+    height: 40px;}
+
+    .darkModeBtn{    
+         width: 50px;
+        height: 40px;}
+
+    .lightModeBtn{  
+            width: 50px;
+            height: 40px; }
 }
