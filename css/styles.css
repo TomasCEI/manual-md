@@ -109,6 +109,10 @@ body{
     margin: 2rem;
 
 }
+
+.Card-buttons {
+    margin-bottom: 2rem;
+}
 .Card-btn.Card-btn--primary{
     color: blue;
     background-color: greenyellow;
@@ -140,19 +144,20 @@ content: "Previous";
     list-style:none;
     margin:0;
     padding:0;
+    background-color:#382bf3;
    }
    
    /* items del menu */
    
 .Menu ul li {
-    background-color:#1100ff;
+   
    }
    
    /* enlaces del menu */
    
 .Menu ul a {
     display:block;
-    color:#fff;
+    color:#3b04f0;
     text-decoration:none;
     font-weight:400;
     font-size:14px;
@@ -165,7 +170,7 @@ content: "Previous";
    }
 
    .Menu ul a:hover{
-    color: rgb(0, 255, 17);
+    color: rgb(83, 224, 198);
    }
    
    /* items del menu */
@@ -224,8 +229,6 @@ content: "Previous";
     justify-content: space-around;
     width: 50%;
 
-
-
 }
 .Card-keywords ul{
     text-decoration:none;
@@ -235,5 +238,9 @@ content: "Previous";
     display: flex;
     justify-content: space-around;
     background-color: #1100ff;
+}
+
+
+    
 }
 
