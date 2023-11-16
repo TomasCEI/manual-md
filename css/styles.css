@@ -276,8 +276,10 @@ margin: 0 auto;}
             width: 50px;
             height: 40px; }
 
-    .h1Nav{ font-size: 14px;}
+    .h1Nav{ font-size: 14px;
+    margin-right: 5px;}
+
     .searchBar{ height: 30px;
-    margin-top: 5px;}
+    margin-top: 0px;}
 
 }
