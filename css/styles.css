@@ -257,6 +257,13 @@ nav {
     color: var(--black);
 }
 
+footer {
+    padding: 50px;
+    text-align: center;
+    font-family: 'Rubik';
+    font-weight: 700;
+}
+
 
 /* ------------------------------------------------------------- */
 
@@ -266,14 +273,13 @@ nav {
 
 
 /* tablet */
-@media screen and (max-width:360px) {
+@media screen and (min-width:360px) and (max-width:767px) {
 
     body {
         margin: 0px;
     }
     
-    .github-corner {
-    }
+    
     
     #container {
         width: 100%;
@@ -344,6 +350,8 @@ nav {
         font-size: 15px;
     }
 
+    
+
     #content hr {
         margin-top: 20px;
     }
@@ -351,5 +359,184 @@ nav {
     #content .code-title {
         font-size: 20px;
         height: 50px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+
+    body {
+        margin: 0px;
+    }
+    
+    
+    #container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+        
+    }
+
+    header {
+        width: 75%;
+        font-size: 13px;
+        margin: 100px auto 70px auto;
+    }
+
+    nav {
+        width: 35%;
+        margin: 0 auto;
+    }
+
+    #menuCapitulos {
+        width: 100%;
+        padding: 12px;
+    
+    }
+    
+    #menuCapitulos .Nav-capitulo a {
+        color: var(--third-color);
+        font-family: 'Bungee';
+        font-size: 15px;
+        margin-bottom: 10px;
+    
+        text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000, 1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+    }
+    
+    #menuCapitulos .Nav-capitulo .Nav-articulos {
+        color: var(--black);
+    }
+    
+    #menuCapitulos .Nav-capitulo .Nav-articulos .Nav-articulo a {
+        font-size: 13px;
+        text-shadow: none;
+        color: var(--white);
+        text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000, 1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+    }
+    
+    
+    
+    #content {
+        font-size: 10px;
+        border-top-right-radius: 40px;
+        border-bottom-right-radius: 40px;
+        margin: 0 auto;
+        max-width: 70%;
+        padding: 40px;
+    }
+
+    #content img {
+        width: 100%;
+    }
+    
+    .dark-button {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: var(--second-color);
+        border: none;
+        color: white;
+        padding: 10px;
+        border-radius: 20px;
+        cursor: pointer;
+        margin-bottom: 70px;
+    
+    }
+    
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 600,
+      'GRAD' 0,
+      'opsz' 24
+    }
+    
+    .material-symbols-outlined.md-48 {
+        font-size: 36px
+    }
+
+}
+
+@media screen and (min-width:1921px) and (max-width:2560px) {
+    body {
+        margin: 40px;
+    }
+    
+    
+    #container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+        
+    }
+
+    header {
+        width: 75%;
+        font-size: 25px;
+        margin: 100px auto 70px auto;
+    }
+
+    nav {
+        width: 25%;
+        margin: 0 auto;
+    }
+
+    #menuCapitulos {
+        width: 100%;
+        padding: 40px;
+    
+    }
+    
+    #menuCapitulos .Nav-capitulo a {
+        color: var(--third-color);
+        font-family: 'Bungee';
+        font-size: 25px;
+        margin-bottom: 10px;
+    
+        text-shadow: 3px 0 #000000, -3px 0 #000000, 0 3px #000000, 0 -3px #000000, 2px 2px #000000, -2px -2px #000000, 2px -2px #000000, -2px 2px #000000;
+    }
+    
+    #menuCapitulos .Nav-capitulo .Nav-articulos {
+        color: var(--black);
+    }
+    
+    #menuCapitulos .Nav-capitulo .Nav-articulos .Nav-articulo a {
+        font-size: 20px;
+        text-shadow: none;
+        color: var(--white);
+        text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000, 1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+    }
+    
+
+    #content {
+        font-size: 10px;
+        border-top-right-radius: 40px;
+        border-bottom-right-radius: 40px;
+        margin: 0 auto;
+        max-width: 80%;
+        padding: 40px;
+    }
+
+    .dark-button {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: var(--second-color);
+        border: none;
+        color: white;
+        padding: 15px;
+        border-radius: 20px;
+        cursor: pointer;
+        margin-bottom: 70px;
+    
+    }
+
+    .material-symbols-outlined.md-48 {
+        font-size: 48px
+    }
+
+    #content img {
+        width: 100%;
     }
 }
