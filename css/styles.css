@@ -212,11 +212,11 @@ nav {
 
 #content h1 {
     font-family: 'Bungee';
+    margin-top: 80px;
     color: var(--third-color);
     text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000, 1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
 
 }
-
 
 #content p {
     font-family: 'Dosis';
@@ -228,7 +228,8 @@ nav {
 #content h2 {
     font-family: 'Dosis';
     font-weight: bold;
-    color: var(--teal);
+    font-size: 30px;
+    color: var(--first-color);
     text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
 }
 
@@ -247,6 +248,7 @@ nav {
     font-family: 'Rubik';
     font-weight: 700;
     color: var(--my-black);
+    height: 40px;
 }
 
 #content pre {
@@ -255,6 +257,10 @@ nav {
 
 #content pre code {
     color: var(--black);
+}
+
+form input[type=checkbox] {
+    font-family: 'Bungee';
 }
 
 footer {
@@ -475,6 +481,7 @@ footer {
         width: 75%;
         font-size: 25px;
         margin: 100px auto 70px auto;
+        text-shadow: 4px 0 #000000, -4px 0 #000000, 0 4px #000000, 0 -4px #000000, 2px 2px #000000, -2px -2px #000000, 2px -2px #000000, -2px 2px #000000;
     }
 
     nav {
@@ -505,17 +512,21 @@ footer {
         font-size: 20px;
         text-shadow: none;
         color: var(--white);
-        text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000, 1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+        text-shadow: 3px 0 #000000, -3px 0 #000000, 0 3px #000000, 0 -3px #000000, 2px 2px #000000, -2px -2px #000000, 2px -2px #000000, -2px 2px #000000;
     }
     
 
     #content {
-        font-size: 10px;
+        font-size: 20px;
         border-top-right-radius: 40px;
         border-bottom-right-radius: 40px;
         margin: 0 auto;
         max-width: 80%;
         padding: 40px;
+    }
+
+    #content p {
+        font-size: 30px;
     }
 
     .dark-button {
@@ -537,6 +548,6 @@ footer {
     }
 
     #content img {
-        width: 100%;
+        width: 60%;
     }
 }
