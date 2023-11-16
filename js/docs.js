@@ -9,10 +9,6 @@ const contentDiv = document.getElementById("content");
 
 
 
-// ------------------  FIN OBTENER CAPITULOS DE UN ARRAY (TEMPORAL) ------------------ //
-
-
-
 // ------------------  MENU DE CAPITULOS  ------------------ //
 
 // Llamada a la función con tu estructura JSON
@@ -198,28 +194,32 @@ function imprimirTarjetas() {
                 const articuloPrevSlug = articuloSlug; // proximamente
                 const articuloNextSlug = articuloSlug; // proximamente
                 const readTime = Math.round(htmlGenerado.length / 1000);
+
                 const customHTML = `<div style="margin-bottom:30px; border: 1px solid gray; padding:20px;" class="Card darkModeCard" id="${articuloSlug}">
                                         <div class="SectionTop" style="display:flex; width:100%; justify-content:space-between; align-items:center;margin-bottom:20px">
-                                            <h1>${articuloTitle}</h1>
-                                            <div style="display:flex;flex-direction:column;">
-                                                <h3 style="padding:10px; border:1px solid gray; margin:0;text-align:center">Tiempo medio de lectura: X min %</h3>
-
-                                            </div>
-                                        </div>
-                                        <div id="keywords">
-                                            <span>Keyword1 ,Keyword2, Keyword3
+                                            <h1 class="Card-title">${articuloTitle}</h1>
+                                            <div class="Card-reading-time">Lectura: ${readTime}min</div>
                                         </div>
 
+                                        <div class="Card-keywords">
+                                            <ul>
+                                                <li><a class="Keyword" herf="#"># Key 1</a></li>
+                                                <li><a class="Keyword" herf="#"># Key 2</a></li>
+                                                <li><a class="Keyword" herf="#"># Key 3</a></li>
+                                            </ul>
+                                        </div>
                                         ${htmlGenerado}
                                         <form>
-                                        <label>
-                                        <input id="check_leido_${articuloSlug}" class="tf_leido" type="checkbox"> Marcar como leído</label></form>
-                                        <div style="margin-top:20px; display:flex; justify-content:space-between">
+                                            <label class="Form-checkbox">
+                                                <input id="check_leido_${articuloSlug}" class="tf_leido" type="checkbox"> Marcar como leído
+                                            </label>
+                                        </form>
+                                        <div class="Card-buttons" style="margin-top:20px; display:flex; justify-content:space-between">
                                             <a href="#${articuloPrevSlug}" class="Card-btn Card-btn--primary" style="text-decoration:none; background-color:white; padding:10px; color:black; border-radius:5px">Anterior</a>
                                             <a href="#${articuloNextSlug}" class="Card-btn Card-btn--secondary"  style="text-decoration:none; background-color:white; padding:10px; color:black; border-radius:5px">Siguiente</a>
-                                        </div>     
-                                    </div>
-                                    `;
+                                        </div>
+                                    </div>`;
+
                 contentDiv.innerHTML += customHTML;
             });
             addContentBeforePre();
