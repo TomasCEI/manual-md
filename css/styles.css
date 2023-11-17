@@ -1,1 +1,67 @@
 /* Hoja de estilos de alumnos */
+
+.MainContent {
+    display:flex;
+
+}
+
+.container {
+
+}
+
+.Card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    margin-bottom: 10px;
+}
+
+.Card-buttons {
+
+}
+.Card-btn {
+    width: 100px;
+    height: 30px;
+    background-color: aquamarine;    
+    display: block;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.Card-btn.Card-btn--primary {
+
+}
+
+.Card-btn.Card-btn--secondary {
+
+}
+
+
+.Card-keywords ul {
+    display:flex;
+    gap: 5px;
+    list-style-type: none;
+}
+
+.Card-keywords .Keyword {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: gray;
+    padding: 5px;
+    color:white;
+}
+.Card-reading-time {
+
+}
+.Card-title {
+
+}
+
+/* ----- Formulario Marcar como leido ----- */
+.Form-checkbox {
+
+}
+.Form-checkbox #check_leido_introduccion {
+
+}
