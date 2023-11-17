@@ -27,14 +27,21 @@
     display: block;
     border: 1px solid black;
     border-radius: 5px;
+    text-align: center;
+}
+.Card-btn:hover {
+    background-color: rgb(121, 191, 148);
+    /* transform:scale(1.2); */
+    transition: width 0.2s;
+    width: 120px;
 }
 
-.Card-btn.Card-btn--primary {
-
+.Card-btn.Card-btn--primary::after {
+    content:"<<";
 }
 
-.Card-btn.Card-btn--secondary {
-
+.Card-btn.Card-btn--secondary::after {
+    content:">>";
 }
 
 
@@ -54,8 +61,25 @@
 .Card-reading-time {
 
 }
+
+.Card-Stats {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
 .Card-title {
 
+}
+.Card-Header {
+    display: flex;
+    justify-content: space-between;
+}
+.Card-Footer {
+    display: flex;
+    justify-content: space-between;
+}
+.Card-buttons {
+    display: flex;
 }
 
 /* ----- Formulario Marcar como leido ----- */
@@ -65,3 +89,56 @@
 .Form-checkbox #check_leido_introduccion {
 
 }
+
+
+.Nav-capitulo {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid gray;
+}
+
+
+
+/* ----- Estilos de Contenido Markdown ----- */
+.Card-Content img {
+ max-width: 90%;
+ margin-left:auto;
+ margin-right:auto;
+ display: flex;
+}
+
+
+#content {
+    width: auto; /* sobreescribo el width proveniente de markdown.css */
+    max-width: 70vw;
+}
+
+/* For mobile phones: */
+@media only screen and (max-width: 768px) {
+    .MainContent {
+        flex-direction: column;
+    }
+    .Nav-capitulo {
+        text-align:center;
+    }
+    .Nav-capitulo li {
+        display:block;
+    }
+
+    .Card-Header {
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+    .Card-title {
+        font-size: 1.5rem;
+    }
+    .Card-Content h1 {
+        font-size: 1.3rem;
+    }
+    #content {
+        width: auto;
+        max-width: 100vw;
+    }
+  }
