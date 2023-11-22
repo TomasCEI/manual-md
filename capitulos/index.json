@@ -80,11 +80,11 @@
             "slug": "diseno-web-css",
             "titulo": "Cascade StyleSheets",
             "ficheros": [{
-                    "slug": "intro",
-                    "titulo": "Introducción",
+                    "slug": "ej-gradient",
+                    "titulo": "Ejemplo Gradiente",
                     "keywords": [],
                     "fecha": "2023-11-01 12:23",
-                    "fichero": "introduccion.md"
+                    "fichero": "ej-gradient.md"
               },{
                     "slug": "contenido",
                     "titulo": "Contenido",
