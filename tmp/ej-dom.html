@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .border {
+            border: 1px solid black;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <h3>Select Usuarios</h3>
+    <select id="userList"></select>
+
+
+
+
+    <script>
+        // Datos de usuarios
+        const listUsuarios = [
+            { id: 1, nombre: 'Juan' },
+            { id: 2, nombre: 'María' },
+            { id: 3, nombre: 'Pedro' }
+        ];
+        // Obtener el elemento select
+        var selectElement = document.getElementById('userList');
+        
+        
+        // Llenar el select con opciones de usuarios
+        listUsuarios.forEach(unUsuario => {
+
+            const option = document.createElement('option');
+
+            option.value = unUsuario.id;
+            option.text = unUsuario.nombre;
+            selectElement.appendChild(option);
+
+        });
+    </script>
+
+<h3>Lista de items:</h3>
+
+    <ul id="productList"></ul>
+    <script>
+        // Datos de productos
+        const productos = [
+            { id: 101, nombre: 'Laptop' },
+            { id: 102, nombre: 'Teléfono' },
+            { id: 103, nombre: 'Tablet' }
+        ];
+        // Obtener el elemento ul
+        const ulElement = document.getElementById('productList');
+        // Llenar la lista ul con elementos li de productos
+        productos.forEach(producto => {
+            const li = document.createElement('li');
+            li.textContent = `${producto.id}: ${producto.nombre}`;
+            ulElement.appendChild(li);
+        });
+    </script>
+
+
+tarjeta de perfil:
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación del DOM</title>
+    <style>
+        /* Estilos básicos para la tarjeta de perfil */
+        .profile-card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+
+    <h3>Crear tarjeta con datos de varibles </h3>
+
+    <div class="profile-card" id="userProfile">
+        <img id="profile-image" src="../imgs/nouser.png" alt="Imagen de perfil">
+        <h2 id="usr-name"></h2>
+        <p id="usr-lastname"></p>
+    </div>
+
+    <script>
+        // Datos del perfil de usuario
+        var userProfile = {
+            imageSrc: "../imgs/user.jpeg",
+            name: "Juan",
+            lastName: "Pérez",
+            mascota: {
+                nombreMascota: "Felix",
+                raza: "gato"
+            }
+        };
+
+        console.log("Nombre de mascota: ", userProfile.mascota.nombreMascota);
+
+        // Obtener elementos por su ID
+
+        const userCard = document.getElementById("userProfile");
+        const imageElement = document.getElementById('profile-image');
+        const nameElement = document.getElementById('usr-name');
+        const lastNameElement = document.getElementById('usr-lastname');
+
+        // Asignar datos del perfil a los elementos
+        // Asignar el Source de una imagen
+        imageElement.src = userProfile.imageSrc;
+
+        // Asignar textos (nombre y apellido)
+        nameElement.textContent = userProfile.name;
+        lastNameElement.textContent = userProfile.lastName;
+
+        //set un attribute especial personalizado
+        userCard.setAttribute('edad', '32');
+        //userCard.setAttribute('title', 'Mi titulo personalizado');
+    </script>
+
+
+    <h3>Contenido de ejemplo</h3>
+
+
+
+    <div id="text-box">Soy un texto</div>
+
+    <span id="ejemplo">Hello <span style="display: none;">World</span></span>
+
+    <div id="cajaContactos">
+        - No hay contactos -
+    </div>
+<script>
+    const elemento=document.getElementById("text-box");
+
+    elemento.textContent = 'Nuevo contenido de texto con textContent';
+    //elemento.innerText = 'Texto cargado con inerText';
+    //elemento.innerHTML = 'Texto en <strong>Negrita</strong>';
+ 
+
+
+    //textContent vs innerText
+
+    const ejemplo = document.getElementById('ejemplo');
+    console.log(ejemplo.innerText); // Devuelve: ''
+
+    const ejemplo2 = document.getElementById('ejemplo');
+    console.log(ejemplo.textContent); // Devuelve: Contenido oculto
+
+
+
+    const cajaContactos=document.getElementById("cajaContactos");
+
+    var listaPersonas=[
+        {
+            nombre: "juan", 
+            tel: "666-123"
+        },
+        {nombre: "maría", tel: "555-123"},
+        {nombre: "lucía flores", tel: "444-123"}
+    ];
+
+    var contactosHTML="";
+
+    listaPersonas.forEach(persona => {
+        contactosHTML = contactosHTML  + `<div class="border">
+                                            <span>nombre: ${persona.nombre}</span><br>
+                                            <span>tel: ${persona.tel}</span>
+                                        </div>`;
+    });
+
+    cajaContactos.innerHTML=contactosHTML;
+
+
+
+/* 
+    //crear elementos:
+    const nuevoElemento = document.createElement('p');
+    nuevoElemento.textContent = 'Nuevo párrafo';
+    elemento.appendChild(nuevoElemento);
+
+
+
+    //AppendCHild:
+    const nuevoElemento2 = document.createElement('p');
+    nuevoElemento2.textContent = 'Nuevo párrafo';
+    elemento.appendChild(nuevoElemento2);
+
+
+    //removeChild:
+    const hijoAEliminar = document.getElementById('hijoAEliminar');
+    elemento.removeChild(hijoAEliminar); */
+</script>
+
+
+</body>
+</html>
