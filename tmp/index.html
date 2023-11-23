@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        #imGradient {
+
+            /*
+            linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.9)),
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.9));
+            */
+            
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.9) 10%), 
+            url('https://webdevetc.com/images/tutorials/e_background.jpg');
+            height: 400px;
+            width: 400px;
+            background-size:cover;
+            border: 1px solid black;
+        }
+    </style>
+    
+    <h1>Ejemplos de JS</h1>
+    <div id="imGradient">
+
+    </div>
+    <!-- <img id="imGradient"  width="500" src="https://webdevetc.com/images/tutorials/e_background.jpg" alt="">
+ -->
+    <h3>Usuario</h3>
+    nombre: tomas<br>
+    edad: 39<br>
+
+    <h3>Lista de Usuarios</h3>
+    <ul>
+        <li>Pato</li>
+        <li>Lucas</li>
+    </ul>
+
+    <script>
+
+        var nombre ="Tomas";
+        var edad= 39;
+
+        var cancionActual="Michael Jackson - Billy Jean";
+
+        var listaDeCanciones= ["tema1", "tema 2", "tema 3"];
+
+        var listaDeNombres= ["Juan", "Pedro", "Maria"];
+
+
+        var aiRitmo= {
+            usuario: {
+                foto_perfil: "imgs/fotoTom.png",
+                nick: "Tomi",
+                email:"Tom"
+            },
+            tema_actual: 2,
+            temas: [{
+                artista: "Michael Jackson",
+                duracion: "3:25",
+                nombre: "Billy Jean"
+            },{
+                artista: "Bizarrap",
+                duracion: "2:18",
+                nombre: "Baby Hello"
+            },{
+                artista: "Abraham Mateo",
+                duracion: "3:17",
+                nombre: "Clavaito"
+            },{
+                artista: "Aerosmith",
+                duracion: "2:25",
+                nombre: "Jaded"
+            },]
+        }
+        
+
+    </script>
+</body>
+</html>
