@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .border {
+            border: 1px solid black;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Cargar contenido de nuestras variables y objetos JS a nuestra HTML</h1>
+
+    <h3>1. Tarjeta de Perfil</h3>
+
+    <style>
+        /* Estilos básicos para la tarjeta de perfil */
+        .profile-card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+
+    <div class="profile-card" id="userProfile">
+        <img class="profile-image" id="usr-image" src="../imgs/nouser.png" alt="Imagen de perfil">
+        <h2 id="usr-name"></h2>
+        <p id="usr-lastname"></p>
+    </div>
+
+    <script>    
+        /**
+         *  Ejercicio 1:
+         * 
+         *  Completar al tarjeta userProfile con los datos del usuario
+         * */
+
+        // 1. Crear variable del perfil de usuario
+        var userProfile = {
+            imageSrc: "../imgs/user.jpeg",
+            name: "Juan",
+            lastName: "Pérez",
+            mascota: {
+                nombreMascota: "Felix",
+                raza: "gato"
+            }
+        };
+
+        // opcional: Vista previa en la consola de Chrome del Nombre de la mascota "FElix"
+        console.log("Nombre de mascota: ", userProfile.mascota.nombreMascota);
+
+        // 2. Obtener los elementos HTML por su ID
+
+        const imageElement = document.getElementById('usr-image');
+        const nameElement = document.getElementById('usr-name');
+        const lastNameElement = document.getElementById('usr-lastname');
+
+        // 3. Asignar datos del perfil a los elementos
+        
+        imageElement.src = userProfile.imageSrc; // Asignar el Source de una imagen
+        nameElement.textContent = userProfile.name; // Asignar textos (nombre y apellido)
+        lastNameElement.textContent = userProfile.lastName;
+
+        //set un attribute especial personalizado
+        const userCard = document.getElementById("userProfile");
+        userCard.setAttribute('edad', '32');
+        //userCard.setAttribute('title', 'Mi titulo personalizado');
+    </script>
+
+
+    <h3>2. Contenido de ejemplo</h3>
+
+    <div id="text-box">Soy un texto</div>
+    <span id="ejemplo">Hello <span style="display: none;">World</span></span>
+
+    <script>
+        /**
+         *  Ejercicio 2:
+         * 
+         *  Cargo textos dentro de mis cajas con las 2 propiedades innerText y textContent
+         * 
+         * */
+
+        const elemento=document.getElementById("text-box");
+
+        // nota:    cada linea sobreescribe la anterior, 
+        //          por eso únicamente se visualizara la útima 
+        //          frase en el HTML creada con innerHTML
+        elemento.textContent = 'Nuevo contenido de texto con textContent';
+        elemento.innerText = 'Texto cargado con innerText';
+        elemento.innerHTML = 'Texto Final en <strong>Negrita</strong>';
+
+
+        // textContent vs innerText
+        // innerText no muestra texto que no este en visible en pantalla.
+        const ejemplo = document.getElementById('ejemplo');
+        console.log(ejemplo.textContent); // Devuelve: Contenido oculto
+        console.log(ejemplo.innerText); // Devuelve vacío: ''
+
+    </script>
+
+
+
+    <h3>3. Caja de Contactos</h3>
+
+    <div id="cajaContactos">
+        - No hay contactos -
+    </div>
+    <script>
+
+        /**
+         *  Ejercicio 3:
+         * 
+         *  Crear una lista de agenda telefónica
+         * */
+
+        // 1. Seleccionar el <div> cajaContactos con su ID
+        const cajaContactos=document.getElementById("cajaContactos");
+
+        // 2. Crear la lista de objetos con los datos de cada contacto
+        var listaPersonas=[
+            {
+                nombre: "juan", 
+                tel: "666-123"
+            },
+            {nombre: "maría", tel: "555-123"},
+            {nombre: "lucía flores", tel: "444-123"}
+        ];
+
+        
+        // 3. Recorro la lista de Personas, y para cada persona creo un <div> con sus datos de contacto
+            
+        var contactosHTML=""; // genero un contenedor vacio donde voy a crear mi código HTML
+        
+        listaPersonas.forEach(persona => {
+            contactosHTML = contactosHTML  + `<div class="border">
+                                                <span>nombre: ${persona.nombre}</span><br>
+                                                <span>tel: ${persona.tel}</span>
+                                            </div>`;
+        });
+
+        // 4. Por último, ingreso todo mi código HTML recien generado dentro de la caja de contactos del paso 1.
+        cajaContactos.innerHTML=contactosHTML;
+
+
+
+        /* 
+            Otras funciones que veremos mas adelante en clase:
+
+            //crear elementos:
+            const nuevoElemento = document.createElement('p');
+            nuevoElemento.textContent = 'Nuevo párrafo';
+            elemento.appendChild(nuevoElemento);
+
+            //AppendCHild:
+            const nuevoElemento2 = document.createElement('p');
+            nuevoElemento2.textContent = 'Nuevo párrafo';
+            elemento.appendChild(nuevoElemento2);
+
+
+            //removeChild:
+            const hijoAEliminar = document.getElementById('hijoAEliminar');
+            elemento.removeChild(hijoAEliminar);
+        */
+    </script>
+
+    <h3>4. Select de Roles</h3>
+
+    Rol del usuario:
+    <select id="listaRoles"></select>
+
+    <script>
+        /**
+         *  Ejercicio 4:
+         * 
+         *  Crear una lista de roles dentro de un <select>
+         * */
+
+
+        // Paso 1: Crear variable con lista de Posibles Roles (cada rol tiene un id)
+        const listaDeRoles = [
+            { id: 1, rol: 'Administrador' },
+            { id: 2, rol: 'Usuario' },
+            { id: 3, rol: 'Invitado' }
+        ];
+
+        // Paso 2: Obtener el elemento <select> utilizando su id
+        var selectElement = document.getElementById('listaRoles');
+        
+        
+        // Paso 3: Llenar el select con opciones de usuarios
+        listaDeRoles.forEach(rol => {
+
+            // crea una etiqueta <option>
+            const option = document.createElement('option');
+
+            option.value = rol.id;       // asigna un "value" a la etiquieta option
+            option.text = rol.rol;    // asigna un texto a la etiqueta option
+            selectElement.appendChild(option); // agregar la etiqueta al <select>
+
+        });
+    </script>
+
+</body>
+</html>
