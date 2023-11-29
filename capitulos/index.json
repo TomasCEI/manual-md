@@ -108,7 +108,20 @@
                     "keywords": [],
                     "fecha": "2023-11-01 12:23",
                     "fichero": "intro.md"
-                }]
+                },{
+                  "slug": "info-general",
+                  "titulo": "Propiedades Generales",
+                  "keywords": [],
+                  "fecha": "2023-11-01 12:23",
+                  "fichero": "info-general.md"
+              },
+                {
+                  "slug": "man-dom",
+                  "titulo": "Manipulación del DOM",
+                  "keywords": [],
+                  "fecha": "2023-11-01 12:23",
+                  "fichero": "manipulacion-dom.md"
+              }]
         },
         {
             "slug": "bibliografia",

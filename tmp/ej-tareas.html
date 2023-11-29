@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // Tu array de tareas
+        let A_tareas = [
+            { tarea: "Tarea 1", tf_completada: false },
+            { tarea: "Tarea 2", tf_completada: true },
+            // ... otras tareas ...
+        ];
+
+        // Función para agregar una nueva tarea al array
+        function agregarTarea() {
+            // Obtener el valor del campo de entrada del formulario
+            const nuevaTarea = document.getElementById("tarea").value;
+
+            // Validar que la tarea no esté vacía
+            if (nuevaTarea.trim() !== "") {
+                // Agregar la nueva tarea al array
+                A_tareas.push({ tarea: nuevaTarea, tf_completada: false });
+
+                // Actualizar la visualización de la lista de tareas
+                mostrarTareas();
+                
+                // Limpiar el campo de entrada
+                document.getElementById("tarea").value = "";
+            } else {
+                alert("Por favor, ingrese una tarea válida.");
+            }
+        }
+
+        // Función para mostrar las tareas en la lista HTML
+        function mostrarTareas() {
+            const listaTareas = document.getElementById("listaTareas");
+            // Limpiar la lista antes de volver a mostrar las tareas
+            listaTareas.innerHTML = "";
+
+            // Iterar sobre el array de tareas y agregar cada tarea a la lista HTML
+            A_tareas.forEach((tarea, index) => {
+                const li = document.createElement("li");
+                li.textContent = `${index + 1}. ${tarea.tarea}`;
+                listaTareas.appendChild(li);
+            });
+        }
+        // Mostrar las tareas inicialmente al cargar la página
+        mostrarTareas();
+    </script>
+</body>
+</html>

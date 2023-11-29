@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejemplo carrito</title>
+</head>
+<body>
+    <div>
+        <h1>Bocadillo</h1>
+        <div>
+            <button onclick="
+                total++;
+                console.log(total);
+                ">sumar 1</button>
+            <button onclick="
+                total=total+2;
+            ">sumar 2</button>
+            <button>sumar 3</button>
+            <button onclick="
+                total--;
+            ">quitar 1</button>
+        </div>
+    </div>
+    <div>
+        <h1>Cafe</h1>
+        <div>
+            <button onclick="
+                total++;
+                console.log(total);
+                ">sumar 1</button>
+            <button onclick="
+                total=total+2;
+            ">sumar 2</button>
+            <button>sumar 3</button>
+            <button onclick="
+                total--;
+            ">quitar 1</button>
+        </div>
+    </div>
+    <div>
+        <h1>Tostado</h1>
+        <div>
+            <button onclick="
+                total++;
+                console.log(total);
+                ">sumar 1</button>
+            <button onclick="
+                total=total+2;
+            ">sumar 2</button>
+            <button>sumar 3</button>
+            <button onclick="
+                total--;
+            ">quitar 1</button>
+        </div>
+    </div>
+
+    <hr>
+
+    <button>Vaciar Cesta</button>
+
+    <button onclick="sumarCafe()
+    ">Mostrar Total</button>
+
+    <script>
+        let total=0;
+
+        function sumarCafe(){
+            total=total+1;
+        }
+    </script>
+</body>
+</html>
