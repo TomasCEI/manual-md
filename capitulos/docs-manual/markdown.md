@@ -91,8 +91,8 @@ otro texto comun
 
 ## Code
 
-El `codigo` tiene  3 `back-ticks alrededor` del bloque.
 
+Los bloques de codigo tienen  3 `back-ticks` (\`\`\`) alrededor y el nombre del lenguaje (opcional) en el que deseo ver la sintaxis.
 ```markdown
     ```javascript
         // Inicio Bloque de código

@@ -142,3 +142,11 @@
         max-width: 100vw;
     }
   }
+
+
+  p code, li code {
+    /* background-color: #eee; */
+    color: lightcoral;
+    padding: 0.2em;
+    border-radius: 0.2em;
+  }	

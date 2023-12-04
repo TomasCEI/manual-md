@@ -1,3 +1,0 @@
-# Manipulación del DOM
-
-

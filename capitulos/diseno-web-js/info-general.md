@@ -144,9 +144,9 @@ caso de backticks (template strings)
 
 
 ### JS en HTML:
-- Se puede ejecutar en etiquetas `<script></script>` deberían ponerse en el  head ya que es parte del código invisible, pero por convención se ponen al final, ya que necesito que se cargue el HTML primero antes de seleccionar sus elementos.
-- Se puede ejecutar en archivos externos .js
-- se puede ejecutar en linea `<button onclick="alert('Felicidades!');"></button>` pero primero ejecutará el de `<script></script>`
+- Se puede ejecutar en etiquetas `<script></script>` deberían ponerse en el head ya que es parte del código invisible, pero por convención se ponen al final, ya que necesito que se cargue previamente el HTML en caso de querer seleccionar elementos del `DOM` que veremos mas adelante.
+- Se puede ejecutar en archivos externos .js `<script src="js/script.js"></script>`
+- se puede ejecutar en linea `<button onclick="alert('Felicidades!');"></button>` pero primero se ejecutará el de `<script></script>` del documento, y luego el de `onclick=""` en caso de hacer click en el elemento.
 
 ### Commentarios:
 
@@ -279,10 +279,13 @@ _______________________________▀▀▀▀
  */
 ```
 
-Escribir javascript directamente en las etiquetas no figura pero puedo redirigir esta información a la consola, con la función:
+### Consola y Console.log
+El `console.log` es una herramienta fundamental en el uso de Javascript. Nos permite imprimir en la consola del navegador información que nos puede ser útil para debuggear nuestro código o para mostrar información al usuario.
+
+Escribir javascript directamente en las etiquetas no figura pero puedo redirigir esta información a la consola, con la función `console.log()`:
 
 ```js
-    2+2 // no figura 
+    2+2 // no figura  en consola
 
     console.log(2+2);
     console.error("Soy un error");
