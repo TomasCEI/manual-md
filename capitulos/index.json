@@ -1,13 +1,13 @@
 {
     "title": "Manual de HTML, CSS y JavaScript",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/200px-HTML5_logo_and_wordmark.svg.png",
-    "github": "https://github.com/TomasCEI/manual-md",
+    "github": "https://tomascei.github.io/manual-md",
     "authors": [
         {
             "nombre": "Tomás Sánchez Gavier",
             "short": "Tomás SG",
             "email": "tomassanchez@profesorado.cei.es",
-            "img": "https://avatars.githubusercontent.com/u/1304310?v=4",
+            "img": "https://avatars.githubusercontent.com/u/147064032?v=4",
             "url": "https://github.com/tomasCEI/"
         }
     ],
@@ -16,117 +16,182 @@
             "slug": "docs-manual",
             "titulo": "El Manual del Manual",
             "ficheros": [{
-                  "slug": "introduccion",
+                  "slug": "01. introduccion",
                   "titulo": "Introducción",
                   "keywords": [],
                   "fecha": "2023-11-01 12:23",
                   "fichero": "1-intro.md"
             },{
                   "slug": "markdown",
-                  "titulo": "Markdown",
+                  "titulo": "02. Markdown",
                   "keywords": [],
                   "fecha": "2023-11-01 12:23",
                   "fichero": "markdown.md"
             },{
                     "slug": "navegacion",
-                    "titulo": "Navegación",
+                    "titulo": "03. Navegación",
                     "keywords": [],
                     "fecha": "2023-11-01 12:23",
                     "fichero": "2-navegacion.md"
               },{
                   "slug": "contenido",
-                  "titulo": "Contenido",
+                  "titulo": "04. Contenido",
                   "keywords": [],
                   "fecha": "2023-11-01 12:23",
                   "fichero": "3-contenido.md"
-            },{
+            }
+            ,{
                   "slug": "javascript",
-                  "titulo": "Javascript",
+                  "titulo": "05. Javascript",
                   "keywords": [],
                   "fecha": "2023-11-01 12:23",
                   "fichero": "4-javascript.md"
-            }]
+            }
+      ]
           },
         {
             "slug": "diseno-web-html",
             "titulo": "HTML y Maquetación",
-            "ficheros": [{
-                    "slug": "intro",
-                    "titulo": "Introducción",
-                    "keywords": ["intro", "introducción", "html", "básico"],
-                    "fecha": "2023-11-01 12:23",
-                    "fichero": "intro.md"
-              },{
-                    "slug": "cap-2",
-                    "titulo": "Capítulo 2",
-                    "keywords": ["cap2", "capítulo 2", "html", "básico"],
-                    "fecha": "2023-11-01 12:23",
-                    "fichero": "capitulo2.md"
-              },{
-                    "slug": "cap-3",
-                    "titulo": "Capítulo 3",
-                    "keywords": [],
-                    "fecha": "2023-11-01 12:23",
-                    "fichero": "capitulo3.md"
-              },{
-                    "slug": "mi-cap-4",
-                    "titulo": "Mi Capítulo 4",
-                    "keywords": [],
-                    "fecha": "2023-11-01 12:23",
-                    "fichero": "capitulo4.html"
-              }]
+            "ficheros": []
           },
           {
             "slug": "diseno-web-css",
             "titulo": "Cascade StyleSheets",
-            "ficheros": [{
-                    "slug": "intro",
-                    "titulo": "Introducción",
-                    "keywords": [],
-                    "fecha": "2023-11-01 12:23",
-                    "fichero": "introduccion.md"
-              },{
-                    "slug": "contenido",
-                    "titulo": "Contenido",
-                    "keywords": ["css", "contenido"],
-                    "fecha": "2023-11-01 12:23",
-                    "fichero": "contenido.html"
-              },{
-                    "slug": "final",
-                    "titulo": "Final",
-                    "keywords": [],
-                    "fecha": "2023-11-01 12:23",
-                    "fichero": "final.md"
-              }]
+            "ficheros": []
           },
         {
             "slug": "diseno-web-js",
             "titulo": "JavaScript",
-            "ficheros": [{
-                    "slug": "intro",
-                    "titulo": "Introducción",
-                    "keywords": [],
-                    "fecha": "2023-11-01 12:23",
-                    "fichero": "intro.md"
-                },{
-                  "slug": "info-general",
-                  "titulo": "Propiedades Generales",
-                  "keywords": [],
-                  "fecha": "2023-11-01 12:23",
-                  "fichero": "info-general.md"
-              },
-                {
-                  "slug": "man-dom",
-                  "titulo": "Manipulación del DOM",
-                  "keywords": [],
-                  "fecha": "2023-11-01 12:23",
-                  "fichero": "manipulacion-dom.md"
-              }]
+            "ficheros": [
+                  {
+                        "slug": "js-introduccion",
+                        "titulo": "01. Introducción",
+                        "keywords": [],
+                        "fecha": "2023-11-01 12:23",
+                        "fichero": "01-introduccion.md"
+                        
+                  },
+                  {
+                        "slug": "js-sintaxis",
+                        "titulo": "02. Sintaxis Básica",
+                        "keywords": [],
+                        "fecha": "2023-11-01 12:23",
+                        "fichero": "02-sintaxis.md"
+                        
+                  },
+                  {
+                        "slug": "js-numeros",
+                        "titulo": "03. Números y Mat.",
+                        "keywords": [],
+                        "fecha": "2023-11-01 12:23",
+                        "fichero": "03-numeros.md"
+                        
+                  },
+                  {
+                        "slug": "js-strings",
+                        "titulo": "04. Strings",
+                        "keywords": [],
+                        "fecha": "2023-11-01 12:23",
+                        "fichero": "04-strings.md"
+                        
+                  },
+                  {
+                        "slug": "js-comentarios",
+                        "titulo": "05. Comentarios",
+                        "keywords": [],
+                        "fecha": "2023-11-01 12:23",
+                        "fichero": "05-comentarios.md"
+                        
+                  },
+                  {
+                        "slug": "js-consola",
+                        "titulo": "06. Uso de Consola",
+                        "keywords": [],
+                        "fecha": "2023-11-01 12:23",
+                        "fichero": "06-consola.md"
+                        
+                  },
+                  {
+                        "slug": "js-variables",
+                        "titulo": "07. Variables",
+                        "keywords": [],
+                        "fecha": "2023-11-01 12:23",
+                        "fichero": "07-variables.md"
+                        
+                  },
+                  {
+                        "slug": "manipulacion-dom",
+                        "titulo": "08. Manipulación del DOM",
+                        "keywords": [],
+                        "fecha": "2023-11-01 12:23",
+                        "fichero": "08-manipulacion-dom.md"
+                  }
+            ]
         },
         {
+            "slug": "ejemplos",
+            "titulo": "Ejemplos",
+            "ficheros": [
+                  {
+                        "slug": "cara-seca",
+                        "titulo": "Cara o Seca",
+                        "keywords": [],
+                        "fecha": "2023-11-01 12:23",
+                        "fichero": "cara-seca.md"
+                  },
+                  {
+                        "slug": "piedra-papel-tijera",
+                        "titulo": "Piedra Papel o Tijera",
+                        "keywords": [],
+                        "fecha": "2023-11-01 12:23",
+                        "fichero": "piedra-papel-tijera.md"
+                  },
+                  {
+                        "slug": "manipulacion-dom",
+                        "titulo": "Manipulación del DOM",
+                        "keywords": [],
+                        "fecha": "2023-11-01 12:23",
+                        "fichero": "dom-manipulation.md"
+                  },
+                  {
+                        "slug": "music-player",
+                        "titulo": "Reproductor de Música",
+                        "keywords": [],
+                        "fecha": "2023-11-01 12:23",
+                        "fichero": "music-player.md"
+                  }
+
+            ]
+          },
+      {
             "slug": "bibliografia",
             "titulo": "Bibliografía",
-            "ficheros": []
-          }
+            "ficheros": [
+                  {
+                        "slug": "bibliografia-FrontEnd",
+                        "titulo": "Links - FrontEnd",
+                        "keywords": [],
+                        "fecha": "2023-11-01 12:23",
+                        "fichero": "diseno-web-front.md"
+                        
+                  },
+                  {
+                        "slug": "bibliografia-css",
+                        "titulo": "Links - CSS",
+                        "keywords": [],
+                        "fecha": "2023-11-01 12:23",
+                        "fichero": "diseno-web-css.md"
+                        
+                  },
+                  {
+                        "slug": "bibliografia-js",
+                        "titulo": "Links - JS",
+                        "keywords": [],
+                        "fecha": "2023-11-01 12:23",
+                        "fichero": "diseno-web-js.md"
+                        
+                  }
+            ]
+      }
     ]
   }
