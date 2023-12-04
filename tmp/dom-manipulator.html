@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            border:1px solid black;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <div id="box1" class="box">1</div>
+    <div class="box box1 red">2</div>
+    <div class="box box1 blue">
+
+        <div class="blue">
+            <p>Esto es un texto</p>
+        </div>
+    </div> -->
+
+    
+    <h1>Cara o Seca</h1>
+
+    <button onClick="
+    
+        var numero=Math.random(); // devuelve un valor entre 0 y 1
+        console.log(numero);
+        if(numero<0.5){
+            console.log('Cara');
+            cantCara++;
+        }else{
+            console.log('Seca');
+            cantSeca++;
+        }
+        textCara.innerHTML=cantCara;
+        textSeca.innerHTML=cantSeca;
+
+        const porcentaje=(cantCara/(cantCara+cantSeca))*100;
+        textPorcentaje.innerHTML=Math.round(porcentaje)+'%';
+
+    
+    
+    ">Tirar Monedad</button>
+
+
+    <p>Cantidad de Caras: <span id="cantCara">0</span></p>
+    <p>Cantidad de Secas: <span id="cantSeca">0</span></p>
+    Porcentaje de Caras: <span id="porcentajeCara">0</span></p>
+
+    
+    <script>
+        let cantCara=0;
+        let cantSeca=0;
+
+        const textCara=document.getElementById("cantCara");
+        const textSeca=document.getElementById("cantSeca");
+        const textPorcentaje=document.getElementById("porcentajeCara");
+
+        // const box2=document.getElementById("box1");
+        // const box1=document.querySelector(".box .blue");
+
+        // box1.innerHTML="Hola desde JS!";
+        // box1.innerHTML+=" <strong>Esto es un texto en negrita</strong>";
+    </script>
+</body>
+</html>

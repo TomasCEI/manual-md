@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transición entre Páginas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.5s ease; /* Añade una transición al color de fondo */
+        }
+
+        .page {
+            display: none;
+            padding: 20px;
+            color: white;
+            height: 100vh;
+        }
+
+        #page1 { background-color: #3498db; }
+        #page2 { background-color: #2ecc71; }
+        #page3 { background-color: #e74c3c; }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid white;
+            color: white;
+            background-color: #333;
+            transition: background-color 0.3s ease, color 0.3s ease; /* Añade transiciones a los colores */
+        }
+
+        a:hover {
+            background-color: white;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page1" class="page">
+        <h1>Página 1</h1>
+        <p>Contenido de la página 1...</p>
+    </div>
+
+    <div id="page2" class="page">
+        <h1>Página 2</h1>
+        <p>Contenido de la página 2...</p>
+    </div>
+
+    <div id="page3" class="page">
+        <h1>Página 3</h1>
+        <p>Contenido de la página 3...</p>
+    </div>
+
+    <script>
+        function changePage(pageId) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.style.display = 'none';
+            });
+
+            document.getElementById(pageId).style.display = 'block';
+        }
+    </script>
+
+    <nav>
+        <a href="#" onclick="changePage('page1')">Página 1</a>
+        <a href="#" onclick="changePage('page2')">Página 2</a>
+        <a href="#" onclick="changePage('page3')">Página 3</a>
+    </nav>
+
+</body>
+</html>

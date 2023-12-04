@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transición Horizontal entre Páginas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            background-color: orange;
+        }
+
+        .pages {
+            display: flex;
+            height: calc(100vh - 50px);
+            width: 300%; /* Ancho total de las páginas (100% * número de páginas) */
+            transition: transform 1.5s ease;
+        }
+
+        .page {
+            flex: 1;
+            padding: 20px;
+            color: white;
+        }
+
+        #page1 { 
+            background-color: #3498db; 
+        }
+        #page2 { 
+            background-color: #2ecc71; 
+        }
+        #page3 { 
+            background-color: #e74c3c; 
+        }
+
+        a {
+            text-decoration: none;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid white;
+            color: white;
+            background-color: #333;
+            transition: background-color 0.3s ease, color 2.3s ease;
+        }
+
+        a:hover {
+            background-color: white;
+            color: red;
+        }
+        nav {
+            position: fixed;
+            display:flex;
+            bottom:0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pages">
+        <div id="page1" class="page">
+            <h1>Página 1</h1>
+            <p>Contenido de la página 1...</p>
+        </div>
+
+        <div id="page2" class="page">
+            <h1>Página 2</h1>
+            <p>Contenido de la página 2...</p>
+        </div>
+
+        <div id="page3" class="page">
+            <h1>Página 3</h1>
+            <p>Contenido de la página 3...</p>
+        </div>
+    </div>
+
+
+
+    <nav>
+        <a href="#page1" onclick="changePage(0)">Página 1</a>
+        <a href="#page2" onclick="changePage(1)">Página 2</a>
+        <a href="#page3" onclick="changePage(2)">Página 3</a>
+    </nav>
+
+    <script>
+        function changePage(pageIndex) {
+            const pagesContainer = document.querySelector('.pages');
+            const offset = pageIndex * -(100/3); // Ancho de cada página (100%) multiplicado por el índice
+
+            pagesContainer.style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+
+</body>
+</html>

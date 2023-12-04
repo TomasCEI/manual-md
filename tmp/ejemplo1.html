@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Transición entre Páginas</title>
+
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            transition: background-color 0.5s ease; /* Transición de color de fondo para toda la página */
+        }
+
+        .page {
+            display: none;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .page h1 {
+            color: #333;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        /* Estilo específico para la primera página */
+        #page1 {
+            display: block;
+        }
+
+        /* Transición entre páginas */
+        .page {
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        /* Cambio de color de fondo en el body */
+        #page1 {
+            background-color: green;
+        }
+
+        #page2 {
+            background-color: red;
+        }
+
+        /* Animación de cambio de opacidad al mostrar/ocultar páginas */
+        body.fade-transition .page {
+            opacity: 0;
+        }
+
+        body.fade-transition #page1 {
+            opacity: 1;
+        }
+
+        body.fade-transition #page2 {
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="page" id="page1">
+        <h1>Página 1</h1>
+        <p>Contenido de la página 1.</p>
+        <a href="#page2">Ir a la Página 2</a>
+    </div>
+
+    <div class="page" id="page2">
+        <h1>Página 2</h1>
+        <p>Contenido de la página 2.</p>
+        <a href="#page1">Volver a la Página 1</a>
+    </div>
+
+    <!-- Agrega esto al final del cuerpo HTML antes de cerrar la etiqueta < / body> -->
+
+    <script>
+        // Manejador de eventos para los enlaces
+        document.addEventListener('DOMContentLoaded', function () {
+            const pages = document.querySelectorAll('.page');
+            const body = document.body;
+
+            // Agrega un evento de clic a todos los enlaces
+            document.querySelectorAll('a').forEach(function (link) {
+
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+
+                    // Obtiene el destino de la página desde el atributo href
+                    const targetPageId = link.getAttribute('href').substring(1);
+
+                    // Oculta todas las páginas
+                    pages.forEach(function (page) {
+                        page.style.display = 'none';
+                    });
+
+                    // Muestra la página de destino
+                    const targetPage = document.getElementById(targetPageId);
+                    if (targetPage) {
+                        targetPage.style.display = 'block';
+
+                        // Agrega una clase al body para aplicar la animación de opacidad
+                        body.classList.add('fade-transition');
+
+                        // Espera a que termine la transición y luego quita la clase
+                        setTimeout(function () {
+                            body.classList.remove('fade-transition');
+                        }, 1500); // 500 ms, que es la duración de la transición en el CSS
+                    }
+                });
+                
+            });
+        });
+    </script>
+
+</body>
+</html>
