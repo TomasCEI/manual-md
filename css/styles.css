@@ -26,12 +26,21 @@ html {
 .Card-btn {
   width: 100px;
   height: 30px;
-  background-color: lightgray;
+  /* background-color: lightgray; */
   display: block;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-radius: 5px;
   text-align: center;
   text-decoration: none;
+
+  border-radius: 100px;
+  background-color: #f2f2f2;
+  border: 1px solid #f2f2f2;
+  color: #242424;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  padding-top: 4px;
 }
 
 .Card-btn:hover {
@@ -43,13 +52,13 @@ html {
 }
 
 .Card-btn.Card-btn--primary::after {
-  /* content: "<<"; */
-  text-wrap: nowrap;
+  content: "<<";
+  /* text-wrap: nowrap; */
 }
 
 .Card-btn.Card-btn--secondary::after {
-  /* content: ">>"; */
-  text-wrap: nowrap;
+  content: ">>";
+  /* text-wrap: nowrap; */
 }
 
 .Card-keywords ul {
