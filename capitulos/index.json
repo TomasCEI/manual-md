@@ -165,6 +165,13 @@
                "keywords": [],
                "fecha": "2023-11-01 12:23",
                "fichero": "13-filter-en-vector.md"
+            },
+            {
+               "slug": "fetch",
+               "titulo": "14. Uso de Fetch",
+               "keywords": [],
+               "fecha": "2023-11-01 12:23",
+               "fichero": "14-fetch.md"
             }
          ]
       },

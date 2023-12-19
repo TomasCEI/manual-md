@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Requests / Response</title>
+      <style>
+         hr {
+            margin-top: 20px;
+            margin-bottom: 80px;
+         }
+      </style>
+   </head>
+   <body>
+      <h1>Requests / Response</h1>
+
+      <!-- Without file input -->
+      <form action="tu-backend" id="loginForm">
+         formulario stanadard:<br />
+         <input type="text" name="nombre" /><br />
+         <input type="text" name="apellido" /><br />
+         <input type="submit" value="Enviar" /><br />
+      </form>
+      <hr />
+
+      <!-- With file input -->
+      <form
+         action="tu-backend"
+         id="fileUploadForm"
+         enctype="multipart/form-data">
+         <input type="text" name="nombre" /><br />
+         <input type="text" name="apellido" /><br />
+         <input type="file" name="fileInput" /><br />
+         <input type="submit" value="Enviar" /><br />
+      </form>
+      <hr />
+
+      <script>
+         let opciones = {
+            method: "GET",
+            headers: {
+               "Content-Type": "application/json",
+            },
+         };
+         let peticion = new Request("./requests.json", opciones);
+         console.log("peticion1 es", peticion);
+
+         // create example of ne Request with its response
+         fetch(peticion)
+            .then((response) => {
+               if (!response.ok) {
+                  throw new Error(
+                     "La solicitud 1 no fue exitosa: " + response.status
+                  );
+               }
+               console.log("response 1 es", response);
+
+               //    //delay 3 seconds
+               //    setTimeout(() => {
+               //       //alert("HOLA!");
+               //    }, 3000);
+               return response.json();
+            })
+            .then((data) => {
+               console.log("data 1 es", data);
+            })
+            .catch((error) => {
+               console.error("error 1 es", error);
+            })
+            .finally(() => {
+               console.log("Final 1 con sin errores!");
+            });
+
+         /* 
+            
+
+            // use fetch to send data to server
+            // va a tirar error el request.json que no puede recibir POST.
+
+
+
+         let opciones2 = {
+            method: "POST",
+            headers: {
+               "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+               name: "John",
+               surname: "Smith",
+            }),
+         };
+         let peticion2 = new Request("./requests.json", opciones2);
+         console.log("peticion2 es", peticion2);
+
+         fetch(peticion2)
+            .then((response) => {
+               console.log("response 2 es", response);
+               return response.json();
+            })
+            .then((data) => {
+               console.log("data 2 es", data);
+            })
+            .catch((error) => {
+               console.error("error 2 es", error);
+            })
+            .finally(() => {
+               console.log("Final 2 con sin errores!");
+            });
+            
+         */
+
+         /* 
+         
+            Ejemeplo de envío de formulario con fetch
+            
+         */
+
+         // Add an event listener to the form's submit event
+         document
+            .getElementById("loginForm")
+            .addEventListener("submit", function (e) {
+               // Prevent the default form submission
+               e.preventDefault();
+
+               console.log("Form submitted with preventDefault()");
+               // Additional logic if needed
+
+               //let form = document.getElementById("loginForm");
+               // let formData = new FormData(form);
+               let formData = new FormData(this);
+
+               let opciones3 = {
+                  method: "POST",
+                  headers: {
+                     // se agrega automático no hace falta incluirlo
+                     // para formularios con archivos se usa el content-type "multipart/form-data"
+                     "Content-Type": "application/x-www-form-urlencoded",
+                  },
+                  body: formData,
+               };
+
+               let url3 = "./requests.json";
+               url3 = this.action;
+
+               fetch(url3, opciones3)
+                  .then((response) => {
+                     console.log("response3 es", response);
+                     return response.json();
+                  })
+                  .then((data) => {
+                     console.log("data3 es", data);
+                  })
+                  .catch((error) => {
+                     console.error("error3 es", error);
+                  })
+                  .finally(() => {
+                     console.log("Final 3 con sin errores!");
+                  });
+            });
+      </script>
+   </body>
+</html>
