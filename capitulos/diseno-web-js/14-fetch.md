@@ -4,7 +4,6 @@ Aunque existen otros métodos (PUT, PUSH, DELETE, OPTIONS), los mas utilizados s
 
 Sin embargo, utilice siempre solicitudes POST cuando:
 
--  Un archivo en caché no es una opción (actualizar un archivo o base de datos en el servidor).
 -  Envío de una gran cantidad de datos al servidor (POST no tiene limitaciones de tamaño).
 -  Al enviar entradas del usuario (que pueden contener caracteres desconocidos), POST es más sólido y seguro que GET.
 
@@ -31,9 +30,14 @@ fetch(url)
    .then(function (data) {
       // Manipular los datos obtenidos
       console.log("Datos obtenidos:", data);
+      // Aquí es donde debería llamar a las funciones que dependen de los datos obtenidos
+      // por ejemplo llamando a la función:
+      // imprimirMisDatos(data);
    })
    .catch(function (error) {
       // Manejar errores de red u otros problemas
       console.error("Error en la solicitud:", error);
    });
 ```
+
+Podemos ver un ejemplo de una API real en la siguiente página: [ReqRes API](https://reqres.in/)

@@ -172,6 +172,13 @@
                "keywords": [],
                "fecha": "2023-11-01 12:23",
                "fichero": "14-fetch.md"
+            },
+            {
+               "slug": "timeouts",
+               "titulo": "15. Timeout e Intervalos",
+               "keywords": [],
+               "fecha": "2023-11-01 12:23",
+               "fichero": "15-timeouts.md"
             }
          ]
       },
